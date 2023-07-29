@@ -1,0 +1,3614 @@
+Libraries/CMSIS/system_stm32f10x.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 41 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+Libraries/CMSIS/system_stm32f10x.c:327:0: information: Skipping configuration 'HSE_VALUE;STM32F10X_CL' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+      SystemCoreClock = HSE_VALUE;
+^
+Libraries/CMSIS/system_stm32f10x.c:388:0: information: Skipping configuration 'HSE_VALUE;STM32F10X_CL' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+          SystemCoreClock = (HSE_VALUE / prediv1factor) * pllmull;
+^
+Libraries/CMSIS/system_stm32f10x.c:396:0: information: Skipping configuration 'HSE_VALUE;STM32F10X_CL' since the value of 'HSE_VALUE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+          SystemCoreClock = (((HSE_VALUE / prediv2factor) * pll2mull) / prediv1factor) * pllmull;
+^
+Libraries/CMSIS/system_stm32f10x.c:152:0: information: Skipping configuration 'STM32F10X_CL;STM32F10X_HD_VL;STM32F10X_LD_VL;STM32F10X_MD_VL;SYSCLK_FREQ_HSE' since the value of 'SYSCLK_FREQ_HSE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_HSE;        /*!< System Clock Frequency (Core Clock) */
+^
+Libraries/CMSIS/system_stm32f10x.c:156:0: information: Skipping configuration 'STM32F10X_CL;SYSCLK_FREQ_36MHz' since the value of 'SYSCLK_FREQ_36MHz' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_36MHz;        /*!< System Clock Frequency (Core Clock) */
+^
+Libraries/CMSIS/system_stm32f10x.c:158:0: information: Skipping configuration 'STM32F10X_CL;SYSCLK_FREQ_48MHz' since the value of 'SYSCLK_FREQ_48MHz' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_48MHz;        /*!< System Clock Frequency (Core Clock) */
+^
+Libraries/CMSIS/system_stm32f10x.c:160:0: information: Skipping configuration 'STM32F10X_CL;SYSCLK_FREQ_56MHz' since the value of 'SYSCLK_FREQ_56MHz' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  uint32_t SystemCoreClock         = SYSCLK_FREQ_56MHz;        /*!< System Clock Frequency (Core Clock) */
+^
+Libraries/FWlib/src/misc.c:114:12: style: The scope of the variable 'tmppriority' can be reduced. [variableScope]
+  uint32_t tmppriority = 0x00, tmppre = 0x00, tmpsub = 0x0F;
+           ^
+Libraries/FWlib/src/misc.c:114:32: style: The scope of the variable 'tmppre' can be reduced. [variableScope]
+  uint32_t tmppriority = 0x00, tmppre = 0x00, tmpsub = 0x0F;
+                               ^
+Libraries/FWlib/src/misc.c:114:24: style: Variable 'tmppriority' is assigned a value that is never used. [unreadVariable]
+  uint32_t tmppriority = 0x00, tmppre = 0x00, tmpsub = 0x0F;
+                       ^
+Libraries/FWlib/src/misc.c:114:39: style: Variable 'tmppre' is assigned a value that is never used. [unreadVariable]
+  uint32_t tmppriority = 0x00, tmppre = 0x00, tmpsub = 0x0F;
+                                      ^
+Libraries/FWlib/src/stm32f10x_can.c:1145:12: style: The scope of the variable 'flagtmp' can be reduced. [variableScope]
+  uint32_t flagtmp=0;
+           ^
+Libraries/FWlib/src/stm32f10x_can.c:1145:19: style: Variable 'flagtmp' is assigned a value that is never used. [unreadVariable]
+  uint32_t flagtmp=0;
+                  ^
+Libraries/FWlib/src/stm32f10x_dma.c:117:23: style: Variable 'DMAy_Channelx->CCR' is reassigned a value before the old one has been used. [redundantAssignment]
+  DMAy_Channelx->CCR  = 0;
+                      ^
+Libraries/FWlib/src/stm32f10x_dma.c:114:22: note: DMAy_Channelx->CCR is assigned
+  DMAy_Channelx->CCR &= (uint16_t)(~DMA_CCR1_EN);
+                     ^
+Libraries/FWlib/src/stm32f10x_dma.c:117:23: note: DMAy_Channelx->CCR is overwritten
+  DMAy_Channelx->CCR  = 0;
+                      ^
+Libraries/FWlib/src/stm32f10x_flash.c:751:12: style: Variable 'status' is reassigned a value before the old one has been used. [redundantAssignment]
+    status = FLASH_WaitForLastBank2Operation(ProgramTimeout);
+           ^
+Libraries/FWlib/src/stm32f10x_flash.c:739:14: note: status is assigned
+      status = FLASH_WaitForLastBank1Operation(ProgramTimeout);
+             ^
+Libraries/FWlib/src/stm32f10x_flash.c:751:12: note: status is overwritten
+    status = FLASH_WaitForLastBank2Operation(ProgramTimeout);
+           ^
+Libraries/FWlib/src/stm32f10x_gpio.c:444:15: style: Variable 'GPIOx->LCKR' is reassigned a value before the old one has been used. [redundantAssignment]
+  GPIOx->LCKR =  GPIO_Pin;
+              ^
+Libraries/FWlib/src/stm32f10x_gpio.c:442:15: note: GPIOx->LCKR is assigned
+  GPIOx->LCKR = tmp;
+              ^
+Libraries/FWlib/src/stm32f10x_gpio.c:444:15: note: GPIOx->LCKR is overwritten
+  GPIOx->LCKR =  GPIO_Pin;
+              ^
+Libraries/FWlib/src/stm32f10x_gpio.c:446:15: style: Variable 'GPIOx->LCKR' is reassigned a value before the old one has been used. [redundantAssignment]
+  GPIOx->LCKR = tmp;
+              ^
+Libraries/FWlib/src/stm32f10x_gpio.c:444:15: note: GPIOx->LCKR is assigned
+  GPIOx->LCKR =  GPIO_Pin;
+              ^
+Libraries/FWlib/src/stm32f10x_gpio.c:446:15: note: GPIOx->LCKR is overwritten
+  GPIOx->LCKR = tmp;
+              ^
+Libraries/FWlib/src/stm32f10x_gpio.c:450:7: style: Variable 'tmp' is reassigned a value before the old one has been used. [redundantAssignment]
+  tmp = GPIOx->LCKR;
+      ^
+Libraries/FWlib/src/stm32f10x_gpio.c:448:7: note: tmp is assigned
+  tmp = GPIOx->LCKR;
+      ^
+Libraries/FWlib/src/stm32f10x_gpio.c:450:7: note: tmp is overwritten
+  tmp = GPIOx->LCKR;
+      ^
+Libraries/FWlib/src/stm32f10x_gpio.c:175:43: style: Variable 'currentpin' is assigned a value that is never used. [unreadVariable]
+  uint32_t currentmode = 0x00, currentpin = 0x00, pinpos = 0x00, pos = 0x00;
+                                          ^
+Libraries/FWlib/src/stm32f10x_gpio.c:175:58: style: Variable 'pinpos' is assigned a value that is never used. [unreadVariable]
+  uint32_t currentmode = 0x00, currentpin = 0x00, pinpos = 0x00, pos = 0x00;
+                                                         ^
+Libraries/FWlib/src/stm32f10x_gpio.c:175:70: style: Variable 'pos' is assigned a value that is never used. [unreadVariable]
+  uint32_t currentmode = 0x00, currentpin = 0x00, pinpos = 0x00, pos = 0x00;
+                                                                     ^
+Libraries/FWlib/src/stm32f10x_gpio.c:176:19: style: Variable 'tmpreg' is assigned a value that is never used. [unreadVariable]
+  uint32_t tmpreg = 0x00, pinmask = 0x00;
+                  ^
+Libraries/FWlib/src/stm32f10x_gpio.c:176:35: style: Variable 'pinmask' is assigned a value that is never used. [unreadVariable]
+  uint32_t tmpreg = 0x00, pinmask = 0x00;
+                                  ^
+Libraries/FWlib/src/stm32f10x_gpio.c:450:7: style: Variable 'tmp' is assigned a value that is never used. [unreadVariable]
+  tmp = GPIOx->LCKR;
+      ^
+Libraries/FWlib/src/stm32f10x_gpio.c:551:29: style: Variable 'tmp1' is assigned a value that is never used. [unreadVariable]
+  uint32_t tmp = 0x00, tmp1 = 0x00, tmpreg = 0x00, tmpmask = 0x00;
+                            ^
+Libraries/FWlib/src/stm32f10x_spi.c:324:11: style: Variable 'tmp' is reassigned a value before the old one has been used. [redundantAssignment]
+      tmp = (uint16_t)(((((sourceclock / 256) * 10) / I2S_InitStruct->I2S_AudioFreq)) + 5);
+          ^
+Libraries/FWlib/src/stm32f10x_spi.c:268:11: note: tmp is assigned
+      tmp = I2S2_CLOCK_SRC;
+          ^
+Libraries/FWlib/src/stm32f10x_spi.c:324:11: note: tmp is overwritten
+      tmp = (uint16_t)(((((sourceclock / 256) * 10) / I2S_InitStruct->I2S_AudioFreq)) + 5);
+          ^
+Libraries/FWlib/src/stm32f10x_spi.c:324:11: style: Variable 'tmp' is reassigned a value before the old one has been used. [redundantAssignment]
+      tmp = (uint16_t)(((((sourceclock / 256) * 10) / I2S_InitStruct->I2S_AudioFreq)) + 5);
+          ^
+Libraries/FWlib/src/stm32f10x_spi.c:273:11: note: tmp is assigned
+      tmp = I2S3_CLOCK_SRC;
+          ^
+Libraries/FWlib/src/stm32f10x_spi.c:324:11: note: tmp is overwritten
+      tmp = (uint16_t)(((((sourceclock / 256) * 10) / I2S_InitStruct->I2S_AudioFreq)) + 5);
+          ^
+Libraries/FWlib/src/stm32f10x_spi.c:221:61: style: Variable 'packetlength' is assigned a value that is never used. [unreadVariable]
+  uint16_t tmpreg = 0, i2sdiv = 2, i2sodd = 0, packetlength = 1;
+                                                            ^
+Libraries/FWlib/src/stm32f10x_spi.c:222:16: style: Variable 'tmp' is assigned a value that is never used. [unreadVariable]
+  uint32_t tmp = 0;
+               ^
+Libraries/FWlib/src/stm32f10x_spi.c:224:24: style: Variable 'sourceclock' is assigned a value that is never used. [unreadVariable]
+  uint32_t sourceclock = 0;
+                       ^
+User/BSP/bsp_usart.c:27:13: style: The scope of the variable 'ucData' can be reduced. [variableScope]
+    uint8_t ucData;
+            ^
+User/COMPONENT/AES/aes.c:80:19: style: The scope of the variable 'result' can be reduced. [variableScope]
+    unsigned char result;
+                  ^
+User/COMPONENT/AT/at.c:204:17: error:inconclusive: Address of local auto-variable assigned to a function parameter. [autoVariables]
+                p_at->p_cmd = cmd_line;
+                ^
+User/COMPONENT/AT/at.c:225:17: error:inconclusive: Address of local auto-variable assigned to a function parameter. [autoVariables]
+                p_at->p_cmd = cmd_line;    /* 重新指向首地址 */
+                ^
+User/COMPONENT/AT/at.c:48:32: error: Array 'data[5]' accessed at index 6, which is out of bounds. [arrayIndexOutOfBounds]
+        at_send_char(p_at, data[i]);
+                               ^
+User/COMPONENT/AT/at.c:161:31: style: Condition 'p_at->p_cmd[0]=='='' is always false [knownConditionTrueFalse]
+    } else if((p_at->p_cmd[0] == '=') && (p_at->p_cmd[1] == '?')  && (p_at->p_cmd[2] == '\r')) {
+                              ^
+User/COMPONENT/AT/at.c:143:78: note: Assuming that condition 'p_at->p_cmd[0]=='='' is not redundant
+    if((p_at->p_cmd[0] >= '0') && (p_at->p_cmd[0] <= '9') || (p_at->p_cmd[0] == '=')) {
+                                                                             ^
+User/COMPONENT/AT/at.c:161:31: note: Condition 'p_at->p_cmd[0]=='='' is always false
+    } else if((p_at->p_cmd[0] == '=') && (p_at->p_cmd[1] == '?')  && (p_at->p_cmd[2] == '\r')) {
+                              ^
+User/COMPONENT/BASE64/base64.c:8:19: style: The scope of the variable 'current' can be reduced. [variableScope]
+    unsigned char current;
+                  ^
+User/COMPONENT/RSA/Rsa.c:35:11: style: The scope of the variable 'i' can be reduced. [variableScope]
+ NN_DIGIT i;
+          ^
+User/COMPONENT/RSA/Rsa.c:58:11: style: The scope of the variable 't' can be reduced. [variableScope]
+ NN_DIGIT t;
+          ^
+User/COMPONENT/RSA/Rsa.c:78:11: style: The scope of the variable 't' can be reduced. [variableScope]
+ NN_DIGIT t;
+          ^
+User/COMPONENT/RSA/Rsa.c:158:11: style: The scope of the variable 'ai' can be reduced. [variableScope]
+ NN_DIGIT ai, carry;
+          ^
+User/COMPONENT/RSA/Rsa.c:180:11: style: The scope of the variable 'ai' can be reduced. [variableScope]
+ NN_DIGIT ai, borrow;
+          ^
+User/COMPONENT/RSA/Rsa.c:201:11: style: The scope of the variable 'bi' can be reduced. [variableScope]
+ NN_DIGIT bi, carry;
+          ^
+User/COMPONENT/RSA/Rsa.c:223:11: style: The scope of the variable 'bi' can be reduced. [variableScope]
+ NN_DIGIT bi, carry;
+          ^
+User/COMPONENT/RSA/Rsa.c:247:28: style: The scope of the variable 'carry' can be reduced. [variableScope]
+ NN_DIGIT dhigh=0, dlow=0, carry;
+                           ^
+User/COMPONENT/RSA/Rsa.c:416:15: style: The scope of the variable 'ciBits' can be reduced. [variableScope]
+ unsigned int ciBits, j, s;
+              ^
+User/COMPONENT/RSA/Rsa.c:417:11: style: The scope of the variable 'ci' can be reduced. [variableScope]
+ NN_DIGIT ci;
+          ^
+User/COMPONENT/RSA/Rsa.c:26:8: style: Variable 'r4' is not assigned a value. [unassignedVariable]
+ umull r4, r5, r0, r1
+       ^
+User/COMPONENT/RSA/Rsa.c:26:12: style: Variable 'r5' is not assigned a value. [unassignedVariable]
+ umull r4, r5, r0, r1
+           ^
+User/COMPONENT/SECURE_BOOT/secure_boot.c:194:13: style: Local variable 'secure_id' shadows outer variable [shadowVariable]
+    uint8_t secure_id[SECURE_ID_LEN];
+            ^
+User/COMPONENT/SECURE_BOOT/secure_boot.c:57:15: note: Shadowed declaration
+const uint8_t secure_id[SECURE_ID_LEN] __attribute__((at(SECURE_ID_ADDR))) = {
+              ^
+User/COMPONENT/SECURE_BOOT/secure_boot.c:194:13: note: Shadow variable
+    uint8_t secure_id[SECURE_ID_LEN];
+            ^
+User/COMPONENT/SECURE_BOOT/secure_boot.c:225:13: style: Local variable 'secure_id' shadows outer variable [shadowVariable]
+    uint8_t secure_id[SECURE_ID_LEN];
+            ^
+User/COMPONENT/SECURE_BOOT/secure_boot.c:57:15: note: Shadowed declaration
+const uint8_t secure_id[SECURE_ID_LEN] __attribute__((at(SECURE_ID_ADDR))) = {
+              ^
+User/COMPONENT/SECURE_BOOT/secure_boot.c:225:13: note: Shadow variable
+    uint8_t secure_id[SECURE_ID_LEN];
+            ^
+User/COMPONENT/SHA1/sha1.c:63:23: style: union member 'CHAR64LONG16::c' is never used. [unusedStructMember]
+        unsigned char c[64];
+                      ^
+User/COMPONENT/SHA1/sha1.c:173:7: style: Variable 'a' is assigned a value that is never used. [unreadVariable]
+    a = b = c = d = e = 0;
+      ^
+User/COMPONENT/SHA1/sha1.c:173:11: style: Variable 'b' is assigned a value that is never used. [unreadVariable]
+    a = b = c = d = e = 0;
+          ^
+User/COMPONENT/SHA1/sha1.c:173:15: style: Variable 'c' is assigned a value that is never used. [unreadVariable]
+    a = b = c = d = e = 0;
+              ^
+User/COMPONENT/SHA1/sha1.c:173:19: style: Variable 'd' is assigned a value that is never used. [unreadVariable]
+    a = b = c = d = e = 0;
+                  ^
+User/COMPONENT/SHA1/sha1.c:173:23: style: Variable 'e' is assigned a value that is never used. [unreadVariable]
+    a = b = c = d = e = 0;
+                      ^
+User/COMPONENT/SHA256/sha256.c:143:62: style:inconclusive: Function 'sha256_hash' argument 3 names different: declaration '__int32' definition 'sz'. [funcArgNamesDifferent]
+void sha256_hash(sha256_context *ctx, uint8_t *dat, uint32_t sz)
+                                                             ^
+User/COMPONENT/SHA256/sha256.h:45:0: note: Function 'sha256_hash' argument 3 names different: declaration '__int32' definition 'sz'.
+void sha256_hash(sha256_context *, uint8_t * /* data */, uint32_t /* len */);
+^
+User/COMPONENT/SHA256/sha256.c:143:62: note: Function 'sha256_hash' argument 3 names different: declaration '__int32' definition 'sz'.
+void sha256_hash(sha256_context *ctx, uint8_t *dat, uint32_t sz)
+                                                             ^
+User/COMPONENT/SOFTWEAR_UART/s_uart.c:284:17: style: The scope of the variable 's_uart_rx_bit' can be reduced. [variableScope]
+        uint8_t s_uart_rx_bit;
+                ^
+User/COMPONENT/STDIO/printf.c:407:10: style: The scope of the variable 'pError' can be reduced. [variableScope]
+    char pError[] = "stdio.c: increase MAX_STRING_SIZE\n\r";
+         ^
+User/COMPONENT/TEA/tea.c:25:27: warning: Either the condition 'text==((void*)0)' is redundant or there is possible null pointer dereference: text. [nullPointerRedundantCheck]
+    TEA_U32 sum = 0, v0 = text[0], v1 = text[1];
+                          ^
+User/COMPONENT/TEA/tea.c:29:14: note: Assuming that condition 'text==((void*)0)' is not redundant
+    if (text == TEA_NULL || key == TEA_NULL) {
+             ^
+User/COMPONENT/TEA/tea.c:25:27: note: Null pointer dereference
+    TEA_U32 sum = 0, v0 = text[0], v1 = text[1];
+                          ^
+User/COMPONENT/TEA/tea.c:26:18: warning: Either the condition 'key==((void*)0)' is redundant or there is possible null pointer dereference: key. [nullPointerRedundantCheck]
+    TEA_U32 k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3];
+                 ^
+User/COMPONENT/TEA/tea.c:29:33: note: Assuming that condition 'key==((void*)0)' is not redundant
+    if (text == TEA_NULL || key == TEA_NULL) {
+                                ^
+User/COMPONENT/TEA/tea.c:26:18: note: Null pointer dereference
+    TEA_U32 k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3];
+                 ^
+User/COMPONENT/TEA/tea.c:46:55: warning: Either the condition 'text==((void*)0)' is redundant or there is possible null pointer dereference: text. [nullPointerRedundantCheck]
+    TEA_U32 sum = TEA_DELTA * gTEA_EncryptTimes, v0 = text[0], v1 = text[1];
+                                                      ^
+User/COMPONENT/TEA/tea.c:50:14: note: Assuming that condition 'text==((void*)0)' is not redundant
+    if (text == TEA_NULL || key == TEA_NULL) {
+             ^
+User/COMPONENT/TEA/tea.c:46:55: note: Null pointer dereference
+    TEA_U32 sum = TEA_DELTA * gTEA_EncryptTimes, v0 = text[0], v1 = text[1];
+                                                      ^
+User/COMPONENT/TEA/tea.c:47:18: warning: Either the condition 'key==((void*)0)' is redundant or there is possible null pointer dereference: key. [nullPointerRedundantCheck]
+    TEA_U32 k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3];
+                 ^
+User/COMPONENT/TEA/tea.c:50:33: note: Assuming that condition 'key==((void*)0)' is not redundant
+    if (text == TEA_NULL || key == TEA_NULL) {
+                                ^
+User/COMPONENT/TEA/tea.c:47:18: note: Null pointer dereference
+    TEA_U32 k0 = key[0], k1 = key[1], k2 = key[2], k3 = key[3];
+                 ^
+User/COMPONENT/UTIL/util.c:155:44: style:inconclusive: Redundant condition: If 'EXPR <= 'F'', the comparison 'EXPR <= 'f'' is always true. [redundantCondition]
+        high = ((*p > '9') && ((*p <= 'F') || (*p <= 'f'))) ? *p - 48 - 7 : *p - 48;
+                                           ^
+User/COMPONENT/UTIL/util.c:156:46: style:inconclusive: Redundant condition: If 'EXPR <= 'F'', the comparison 'EXPR <= 'f'' is always true. [redundantCondition]
+        low = (*(++ p) > '9' && ((*p <= 'F') || (*p <= 'f'))) ? *(p) - 48 - 7 : *(p) - 48;
+                                             ^
+User/COMPONENT/UTIL/util.c:161:64: style:inconclusive: Redundant condition: If 'EXPR <= 'F'', the comparison 'EXPR <= 'f'' is always true. [redundantCondition]
+    if(tmplen % 2 != 0) out[cnt] = ((*p > '9') && ((*p <= 'F') || (*p <= 'f'))) ? *p - 48 - 7 : *p - 48;
+                                                               ^
+User/COMPONENT/UTIL/util.c:264:13: style: Redundant condition: If 'EXPR == '-'', the comparison 'EXPR' is always true. [redundantCondition]
+    if(*str && *str == '-') {
+            ^
+User/COMPONENT/UTIL/util.c:270:18: style:inconclusive: Redundant condition: If 'EXPR >= '0'', the comparison 'EXPR' is always true. [redundantCondition]
+    for(; (*str) && (*str >= '0') && (*str <= '9'); str++) {
+                 ^
+User/COMPONENT/UTIL/util.c:152:12: style: Redundant initialization for 'tmplen'. The initialized value is overwritten before it is read. [redundantInitialization]
+    tmplen = strlen(p);
+           ^
+User/COMPONENT/UTIL/util.c:151:16: note: tmplen is initialized
+    int tmplen = strlen(p), cnt = 0;
+               ^
+User/COMPONENT/UTIL/util.c:152:12: note: tmplen is overwritten
+    tmplen = strlen(p);
+           ^
+User/COMPONENT/UTIL/util.c:150:10: style: The scope of the variable 'high' can be reduced. [variableScope]
+    char high = 0, low = 0;
+         ^
+User/COMPONENT/UTIL/util.c:150:20: style: The scope of the variable 'low' can be reduced. [variableScope]
+    char high = 0, low = 0;
+                   ^
+User/COMPONENT/UTIL/util.c:289:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+User/COMPONENT/UTIL/util.c:150:15: style: Variable 'high' is assigned a value that is never used. [unreadVariable]
+    char high = 0, low = 0;
+              ^
+User/COMPONENT/UTIL/util.c:150:24: style: Variable 'low' is assigned a value that is never used. [unreadVariable]
+    char high = 0, low = 0;
+                       ^
+User/COMPONENT/base64_2/base64.c:78:16: style: The scope of the variable 'c' can be reduced. [variableScope]
+ unsigned char c;
+               ^
+User/COMPONENT/base64_2/base64.c:126:16: style: The scope of the variable 'c' can be reduced. [variableScope]
+ unsigned char c;
+               ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:448:13: style: Condition 'newbuffer' is always true [knownConditionTrueFalse]
+        if (newbuffer)
+            ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:440:13: note: Assuming that condition '!newbuffer' is not redundant
+        if (!newbuffer)
+            ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:448:13: note: Condition 'newbuffer' is always true
+        if (newbuffer)
+            ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:490:17: style: Condition '(d*0)!=0' is always false [knownConditionTrueFalse]
+    if ((d * 0) != 0)
+                ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:700:42: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    const unsigned char *input_pointer = buffer_at_offset(input_buffer) + 1;
+                                         ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1566:13: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+        if (cannot_access_at_index(input_buffer, 0) || (buffer_at_offset(input_buffer)[0] != ':'))
+            ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1556:41: note: Calling function 'parse_string', 2nd argument 'input_buffer' value is 0
+        if (!parse_string(current_item, input_buffer))
+                                        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:700:42: note: Null pointer dereference
+    const unsigned char *input_pointer = buffer_at_offset(input_buffer) + 1;
+                                         ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:701:38: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    const unsigned char *input_end = buffer_at_offset(input_buffer) + 1;
+                                     ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1566:13: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+        if (cannot_access_at_index(input_buffer, 0) || (buffer_at_offset(input_buffer)[0] != ':'))
+            ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1556:41: note: Calling function 'parse_string', 2nd argument 'input_buffer' value is 0
+        if (!parse_string(current_item, input_buffer))
+                                        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:701:38: note: Null pointer dereference
+    const unsigned char *input_end = buffer_at_offset(input_buffer) + 1;
+                                     ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:706:9: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    if (buffer_at_offset(input_buffer)[0] != '\"')
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1566:13: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+        if (cannot_access_at_index(input_buffer, 0) || (buffer_at_offset(input_buffer)[0] != ':'))
+            ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1556:41: note: Calling function 'parse_string', 2nd argument 'input_buffer' value is 0
+        if (!parse_string(current_item, input_buffer))
+                                        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:706:9: note: Null pointer dereference
+    if (buffer_at_offset(input_buffer)[0] != '\"')
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1346:9: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    if (input_buffer->depth >= CJSON_NESTING_LIMIT)
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1360:9: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+    if (can_access_at_index(input_buffer, 0) && (buffer_at_offset(input_buffer)[0] == ']'))
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1346:9: note: Null pointer dereference
+    if (input_buffer->depth >= CJSON_NESTING_LIMIT)
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1350:5: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    input_buffer->depth++;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1360:9: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+    if (can_access_at_index(input_buffer, 0) && (buffer_at_offset(input_buffer)[0] == ']'))
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1350:5: note: Null pointer dereference
+    input_buffer->depth++;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1352:9: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    if (buffer_at_offset(input_buffer)[0] != '[')
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1360:9: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+    if (can_access_at_index(input_buffer, 0) && (buffer_at_offset(input_buffer)[0] == ']'))
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1352:9: note: Null pointer dereference
+    if (buffer_at_offset(input_buffer)[0] != '[')
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1358:5: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    input_buffer->offset++;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1360:9: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+    if (can_access_at_index(input_buffer, 0) && (buffer_at_offset(input_buffer)[0] == ']'))
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1358:5: note: Null pointer dereference
+    input_buffer->offset++;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1369:9: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+        input_buffer->offset--;
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1360:9: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+    if (can_access_at_index(input_buffer, 0) && (buffer_at_offset(input_buffer)[0] == ']'))
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1369:9: note: Null pointer dereference
+        input_buffer->offset--;
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1502:9: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    if (input_buffer->depth >= CJSON_NESTING_LIMIT)
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1508:9: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+    if (cannot_access_at_index(input_buffer, 0) || (buffer_at_offset(input_buffer)[0] != '{'))
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1502:9: note: Null pointer dereference
+    if (input_buffer->depth >= CJSON_NESTING_LIMIT)
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1506:5: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    input_buffer->depth++;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1508:9: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+    if (cannot_access_at_index(input_buffer, 0) || (buffer_at_offset(input_buffer)[0] != '{'))
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1506:5: note: Null pointer dereference
+    input_buffer->depth++;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1513:5: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    input_buffer->offset++;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1515:9: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+    if (can_access_at_index(input_buffer, 0) && (buffer_at_offset(input_buffer)[0] == '}'))
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1513:5: note: Null pointer dereference
+    input_buffer->offset++;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1523:9: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+        input_buffer->offset--;
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1515:9: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+    if (can_access_at_index(input_buffer, 0) && (buffer_at_offset(input_buffer)[0] == '}'))
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1523:9: note: Null pointer dereference
+        input_buffer->offset--;
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1528:5: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+    input_buffer->offset--;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1566:13: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+        if (cannot_access_at_index(input_buffer, 0) || (buffer_at_offset(input_buffer)[0] != ':'))
+            ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1528:5: note: Null pointer dereference
+    input_buffer->offset--;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1554:9: warning: Either the condition 'input_buffer!=NULL' is redundant or there is possible null pointer dereference: input_buffer. [nullPointerRedundantCheck]
+        input_buffer->offset++;
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1566:13: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+        if (cannot_access_at_index(input_buffer, 0) || (buffer_at_offset(input_buffer)[0] != ':'))
+            ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1554:9: note: Null pointer dereference
+        input_buffer->offset++;
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:457:22: warning: Either the condition 'newbuffer' is redundant or there is pointer arithmetic with NULL pointer. [nullPointerArithmeticRedundantCheck]
+    return newbuffer + p->offset;
+                     ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:448:13: note: Assuming that condition 'newbuffer' is not redundant
+        if (newbuffer)
+            ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:457:22: note: Null pointer addition
+    return newbuffer + p->offset;
+                     ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:214:40: style:inconclusive: Function 'cJSON_Delete' argument 1 names different: declaration 'c' definition 'item'. [funcArgNamesDifferent]
+CJSON_PUBLIC(void) cJSON_Delete(cJSON *item)
+                                       ^
+User/COMPONENT/cJSON/cJSON/cJSON.h:155:40: note: Function 'cJSON_Delete' argument 1 names different: declaration 'c' definition 'item'.
+CJSON_PUBLIC(void) cJSON_Delete(cJSON *c);
+                                       ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:214:40: note: Function 'cJSON_Delete' argument 1 names different: declaration 'c' definition 'item'.
+CJSON_PUBLIC(void) cJSON_Delete(cJSON *item)
+                                       ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1192:69: style:inconclusive: Function 'cJSON_PrintPreallocated' argument 2 names different: declaration 'buffer' definition 'buf'. [funcArgNamesDifferent]
+CJSON_PUBLIC(cJSON_bool) cJSON_PrintPreallocated(cJSON *item, char *buf, const int len, const cJSON_bool fmt)
+                                                                    ^
+User/COMPONENT/cJSON/cJSON/cJSON.h:153:69: note: Function 'cJSON_PrintPreallocated' argument 2 names different: declaration 'buffer' definition 'buf'.
+CJSON_PUBLIC(cJSON_bool) cJSON_PrintPreallocated(cJSON *item, char *buffer, const int length, const cJSON_bool format);
+                                                                    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1192:69: note: Function 'cJSON_PrintPreallocated' argument 2 names different: declaration 'buffer' definition 'buf'.
+CJSON_PUBLIC(cJSON_bool) cJSON_PrintPreallocated(cJSON *item, char *buf, const int len, const cJSON_bool fmt)
+                                                                    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1192:84: style:inconclusive: Function 'cJSON_PrintPreallocated' argument 3 names different: declaration 'length' definition 'len'. [funcArgNamesDifferent]
+CJSON_PUBLIC(cJSON_bool) cJSON_PrintPreallocated(cJSON *item, char *buf, const int len, const cJSON_bool fmt)
+                                                                                   ^
+User/COMPONENT/cJSON/cJSON/cJSON.h:153:87: note: Function 'cJSON_PrintPreallocated' argument 3 names different: declaration 'length' definition 'len'.
+CJSON_PUBLIC(cJSON_bool) cJSON_PrintPreallocated(cJSON *item, char *buffer, const int length, const cJSON_bool format);
+                                                                                      ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1192:84: note: Function 'cJSON_PrintPreallocated' argument 3 names different: declaration 'length' definition 'len'.
+CJSON_PUBLIC(cJSON_bool) cJSON_PrintPreallocated(cJSON *item, char *buf, const int len, const cJSON_bool fmt)
+                                                                                   ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1192:106: style:inconclusive: Function 'cJSON_PrintPreallocated' argument 4 names different: declaration 'format' definition 'fmt'. [funcArgNamesDifferent]
+CJSON_PUBLIC(cJSON_bool) cJSON_PrintPreallocated(cJSON *item, char *buf, const int len, const cJSON_bool fmt)
+                                                                                                         ^
+User/COMPONENT/cJSON/cJSON/cJSON.h:153:112: note: Function 'cJSON_PrintPreallocated' argument 4 names different: declaration 'format' definition 'fmt'.
+CJSON_PUBLIC(cJSON_bool) cJSON_PrintPreallocated(cJSON *item, char *buffer, const int length, const cJSON_bool format);
+                                                                                                               ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1192:106: note: Function 'cJSON_PrintPreallocated' argument 4 names different: declaration 'format' definition 'fmt'.
+CJSON_PUBLIC(cJSON_bool) cJSON_PrintPreallocated(cJSON *item, char *buf, const int len, const cJSON_bool fmt)
+                                                                                                         ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2279:51: style:inconclusive: Function 'cJSON_CreateBool' argument 1 names different: declaration 'boolean' definition 'b'. [funcArgNamesDifferent]
+CJSON_PUBLIC(cJSON *) cJSON_CreateBool(cJSON_bool b)
+                                                  ^
+User/COMPONENT/cJSON/cJSON/cJSON.h:187:51: note: Function 'cJSON_CreateBool' argument 1 names different: declaration 'boolean' definition 'b'.
+CJSON_PUBLIC(cJSON *) cJSON_CreateBool(cJSON_bool boolean);
+                                                  ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2279:51: note: Function 'cJSON_CreateBool' argument 1 names different: declaration 'boolean' definition 'b'.
+CJSON_PUBLIC(cJSON *) cJSON_CreateBool(cJSON_bool b)
+                                                  ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1438:19: style: Variable 'length' is assigned a value that is never used. [unreadVariable]
+    size_t length = 0;
+                  ^
+User/COMPONENT/cJSON/cJSON/cJSON_Utils.c:1014:9: style: The scope of the variable 'status' can be reduced. [variableScope]
+    int status = 0;
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON_Utils.c:1043:9: style: The scope of the variable 'status' can be reduced. [variableScope]
+    int status = 0;
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON_Utils.c:1014:16: style: Variable 'status' is assigned a value that is never used. [unreadVariable]
+    int status = 0;
+               ^
+User/COMPONENT/cJSON/cJSON/cJSON_Utils.c:1043:16: style: Variable 'status' is assigned a value that is never used. [unreadVariable]
+    int status = 0;
+               ^
+User/COMPONENT/cJSON/cJSON/tests/cjson_add.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/common.h:34:10: warning: Either the condition 'item!=NULL' is redundant or there is possible null pointer dereference: item. [nullPointerRedundantCheck]
+    if ((item->valuestring != NULL) && !(item->type & cJSON_IsReference))
+         ^
+User/COMPONENT/cJSON/cJSON/tests/common.h:30:15: note: Assuming that condition 'item!=NULL' is not redundant
+    if ((item != NULL) && (item->child != NULL))
+              ^
+User/COMPONENT/cJSON/cJSON/tests/common.h:34:10: note: Null pointer dereference
+    if ((item->valuestring != NULL) && !(item->type & cJSON_IsReference))
+         ^
+User/COMPONENT/cJSON/cJSON/tests/cjson_add.c:379:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(cjson_add_null_should_add_null);
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.h:39:0: information: Skipping configuration 'UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE' since the value of 'UNITY_WEAK_ATTRIBUTE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_WEAK_ATTRIBUTE void setUp(void) { }
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.h:40:0: information: Skipping configuration 'UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE' since the value of 'UNITY_WEAK_ATTRIBUTE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_WEAK_ATTRIBUTE void tearDown(void) { }
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.h:41:0: information: Skipping configuration 'UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE' since the value of 'UNITY_WEAK_ATTRIBUTE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_WEAK_ATTRIBUTE void suiteSetUp(void) { }
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.h:42:0: information: Skipping configuration 'UNITY_INCLUDE_SETUP_STUBS;UNITY_WEAK_ATTRIBUTE' since the value of 'UNITY_WEAK_ATTRIBUTE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_WEAK_ATTRIBUTE int suiteTearDown(int num_failures) { return num_failures; }
+^
+User/COMPONENT/cJSON/cJSON/tests/compare_tests.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/compare_tests.c:193:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(cjson_compare_should_compare_null_pointer_as_not_equal);
+^
+User/COMPONENT/cJSON/cJSON/tests/json_patch_tests.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/json_patch_tests.c:238:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(cjson_utils_should_pass_json_patch_test_tests);
+^
+User/COMPONENT/cJSON/cJSON/tests/misc_tests.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/cJSON.c:80:12: warning: Possible null pointer dereference: item [nullPointer]
+    return item->valuestring;
+           ^
+User/COMPONENT/cJSON/cJSON/tests/misc_tests.c:460:5: note: Calling function 'cJSON_GetStringValue', 1st argument 'NULL' value is 0
+    TEST_ASSERT_NULL(cJSON_GetStringValue(NULL));
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:76:9: note: Assuming condition is Assuming condition is false
+    if (!cJSON_IsString(item)) {
+        ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:80:12: note: Null pointer dereference
+    return item->valuestring;
+           ^
+User/COMPONENT/cJSON/cJSON/tests/misc_tests.c:534:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(cjson_array_foreach_should_loop_over_arrays);
+^
+User/COMPONENT/cJSON/cJSON/tests/misc_utils_tests.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/misc_utils_tests.c:77:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(cjson_utils_functions_shouldnt_crash_with_null_pointers);
+^
+User/COMPONENT/cJSON/cJSON/tests/old_utils_tests.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/old_utils_tests.c:198:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(json_pointer_tests);
+^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1003:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = NULL;
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1003:12: note: Shadow variable
+    cJSON *item = NULL;
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2248:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2248:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2259:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2259:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2270:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2270:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2281:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2281:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2292:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2292:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2318:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2318:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2335:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2335:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2347:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2347:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2357:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2357:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2368:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2368:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2385:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2385:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2396:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2396:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_array.c:161:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(parse_array_should_parse_empty_arrays);
+^
+User/COMPONENT/cJSON/cJSON/tests/parse_examples.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/common.h:54:18: warning: Either the condition 'expected_path!=NULL' is redundant or there is possible null pointer dereference: filename. [nullPointerRedundantCheck]
+    file = fopen(filename, "rb");
+                 ^
+User/COMPONENT/cJSON/cJSON/tests/parse_examples.c:103:23: note: Assuming that condition 'expected_path!=NULL' is not redundant
+    if (expected_path != NULL)
+                      ^
+User/COMPONENT/cJSON/cJSON/tests/parse_examples.c:72:26: note: Calling function 'read_file', 1st argument 'expected_path' value is 0
+    expected = read_file(expected_path);
+                         ^
+User/COMPONENT/cJSON/cJSON/tests/common.h:54:18: note: Null pointer dereference
+    file = fopen(filename, "rb");
+                 ^
+User/COMPONENT/cJSON/cJSON/tests/parse_examples.c:201:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(file_test1_should_be_parsed_and_printed);
+^
+User/COMPONENT/cJSON/cJSON/tests/parse_hex4.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/parse_hex4.c:70:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(parse_hex4_should_parse_all_combinations);
+^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1003:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = NULL;
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1003:12: note: Shadow variable
+    cJSON *item = NULL;
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2248:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2248:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2259:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2259:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2270:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2270:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2281:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2281:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2292:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2292:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2318:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2318:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2335:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2335:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2347:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2347:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2357:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2357:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2368:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2368:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2385:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2385:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2396:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2396:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_number.c:104:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(parse_number_should_parse_zero);
+^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1003:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = NULL;
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1003:12: note: Shadow variable
+    cJSON *item = NULL;
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2248:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2248:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2259:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2259:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2270:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2270:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2281:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2281:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2292:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2292:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2318:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2318:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2335:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2335:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2347:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2347:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2357:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2357:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2368:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2368:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2385:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2385:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2396:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2396:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_object.c:171:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(parse_object_should_parse_empty_objects);
+^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1003:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = NULL;
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1003:12: note: Shadow variable
+    cJSON *item = NULL;
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2248:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2248:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2259:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2259:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2270:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2270:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2281:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2281:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2292:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2292:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2318:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2318:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2335:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2335:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2347:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2347:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2357:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2357:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2368:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2368:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2385:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2385:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2396:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2396:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_string.c:128:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(parse_string_should_parse_strings);
+^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1003:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = NULL;
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1003:12: note: Shadow variable
+    cJSON *item = NULL;
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2248:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2248:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2259:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2259:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2270:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2270:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2281:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2281:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2292:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2292:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2318:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2318:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2335:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2335:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2347:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2347:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2357:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2357:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2368:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2368:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2385:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2385:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2396:12: style: Local variable 'item' shadows outer variable [shadowVariable]
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:31:14: note: Shadowed declaration
+static cJSON item[1];
+             ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:2396:12: note: Shadow variable
+    cJSON *item = cJSON_New_Item(&global_hooks);
+           ^
+User/COMPONENT/cJSON/cJSON/tests/parse_value.c:104:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(parse_value_should_parse_null);
+^
+User/COMPONENT/cJSON/cJSON/tests/parse_with_opts.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/parse_with_opts.c:104:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(parse_with_opts_should_handle_null);
+^
+User/COMPONENT/cJSON/cJSON/tests/print_array.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/print_array.c:95:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(print_array_should_print_empty_arrays);
+^
+User/COMPONENT/cJSON/cJSON/tests/print_number.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/print_number.c:97:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(print_number_should_print_zero);
+^
+User/COMPONENT/cJSON/cJSON/tests/print_object.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/print_object.c:96:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(print_object_should_print_empty_objects);
+^
+User/COMPONENT/cJSON/cJSON/tests/print_string.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/print_string.c:73:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(print_string_should_print_empty_strings);
+^
+User/COMPONENT/cJSON/cJSON/tests/print_value.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/print_value.c:98:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(print_value_should_print_null);
+^
+User/COMPONENT/cJSON/cJSON/tests/readme_examples.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 31 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/readme_examples.c:253:0: error: failed to expand 'RUN_TEST', Wrong number of parameters for macro 'RUN_TEST'. [preprocessorErrorDirective]
+    RUN_TEST(create_monitor_should_create_a_monitor);
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_1/src/ProductionCode.c:16:26: warning: Either the condition 'i<=8' is redundant or the array 'NumbersToFind[9]' is accessed at index 9, which is out of bounds. [arrayIndexOutOfBoundsCond]
+        if (NumbersToFind[i] == NumberToFind) /* Yikes!  I'm getting run after the loop finishes instead of during it! */
+                         ^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_1/src/ProductionCode.c:14:14: note: Assuming that condition 'i<=8' is not redundant
+    while (i <= 8) /* Notice I should have been in braces */
+             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_1/src/ProductionCode.c:16:26: note: Array index out of bounds
+        if (NumbersToFind[i] == NumberToFind) /* Yikes!  I'm getting run after the loop finishes instead of during it! */
+                         ^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_2/src/ProductionCode.c:16:26: warning: Either the condition 'i<=8' is redundant or the array 'NumbersToFind[9]' is accessed at index 9, which is out of bounds. [arrayIndexOutOfBoundsCond]
+        if (NumbersToFind[i] == NumberToFind) //Yikes!  I'm getting run after the loop finishes instead of during it!
+                         ^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_2/src/ProductionCode.c:14:14: note: Assuming that condition 'i<=8' is not redundant
+    while (i <= 8) //Notice I should have been in braces
+             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_2/src/ProductionCode.c:16:26: note: Array index out of bounds
+        if (NumbersToFind[i] == NumberToFind) //Yikes!  I'm getting run after the loop finishes instead of during it!
+                         ^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_3/src/ProductionCode.c:16:26: warning: Either the condition 'i<=8' is redundant or the array 'NumbersToFind[9]' is accessed at index 9, which is out of bounds. [arrayIndexOutOfBoundsCond]
+        if (NumbersToFind[i] == NumberToFind) //Yikes!  I'm getting run after the loop finishes instead of during it!
+                         ^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_3/src/ProductionCode.c:14:14: note: Assuming that condition 'i<=8' is not redundant
+    while (i <= 8) //Notice I should have been in braces
+             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_3/src/ProductionCode.c:16:26: note: Array index out of bounds
+        if (NumbersToFind[i] == NumberToFind) //Yikes!  I'm getting run after the loop finishes instead of during it!
+                         ^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:215:5: error: Memory leak: guard [memleak]
+    return (void*)mem;
+    ^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:153:47: style:inconclusive: Function 'UnityMalloc_MakeMallocFailAfterCount' argument 1 names different: declaration 'count' definition 'countdown'. [funcArgNamesDifferent]
+void UnityMalloc_MakeMallocFailAfterCount(int countdown)
+                                              ^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.h:81:47: note: Function 'UnityMalloc_MakeMallocFailAfterCount' argument 1 names different: declaration 'count' definition 'countdown'.
+void UnityMalloc_MakeMallocFailAfterCount(int count);
+                                              ^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:153:47: note: Function 'UnityMalloc_MakeMallocFailAfterCount' argument 1 names different: declaration 'count' definition 'countdown'.
+void UnityMalloc_MakeMallocFailAfterCount(int countdown)
+                                              ^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:322:30: style:inconclusive: Function 'UnityPointer_Set' argument 1 names different: declaration 'ptr' definition 'pointer'. [funcArgNamesDifferent]
+void UnityPointer_Set(void** pointer, void* newValue, UNITY_LINE_TYPE line)
+                             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture_internals.h:40:30: note: Function 'UnityPointer_Set' argument 1 names different: declaration 'ptr' definition 'pointer'.
+void UnityPointer_Set(void** ptr, void* newValue, UNITY_LINE_TYPE line);
+                             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:322:30: note: Function 'UnityPointer_Set' argument 1 names different: declaration 'ptr' definition 'pointer'.
+void UnityPointer_Set(void** pointer, void* newValue, UNITY_LINE_TYPE line)
+                             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture_malloc_overrides.h:34:0: information: Skipping configuration 'UNITY_FIXTURE_FREE;UNITY_FIXTURE_MALLOC' since the value of 'UNITY_FIXTURE_FREE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    extern void UNITY_FIXTURE_FREE(void* ptr);
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:239:0: information: Skipping configuration 'UNITY_FIXTURE_FREE;UNITY_FIXTURE_MALLOC' since the value of 'UNITY_FIXTURE_FREE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_FIXTURE_FREE(guard);
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture_malloc_overrides.h:33:0: information: Skipping configuration 'UNITY_FIXTURE_FREE;UNITY_FIXTURE_MALLOC' since the value of 'UNITY_FIXTURE_MALLOC' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    extern void* UNITY_FIXTURE_MALLOC(size_t size);
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:206:0: information: Skipping configuration 'UNITY_FIXTURE_FREE;UNITY_FIXTURE_MALLOC' since the value of 'UNITY_FIXTURE_MALLOC' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    guard = (Guard*)UNITY_FIXTURE_MALLOC(total_size);
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 26 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:212:9: style: The scope of the variable 'nibble' can be reduced. [variableScope]
+    int nibble;
+        ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1009:18: style: The scope of the variable 'i' can be reduced. [variableScope]
+    UNITY_UINT32 i;
+                 ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1049:18: style: The scope of the variable 'i' can be reduced. [variableScope]
+    UNITY_UINT32 i;
+                 ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1173:18: style: The scope of the variable 'bytes' can be reduced. [variableScope]
+    UNITY_UINT32 bytes;
+                 ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:176:39: style:inconclusive: Function 'UnityPrintNumber' argument 1 names different: declaration 'number' definition 'number_to_print'. [funcArgNamesDifferent]
+void UnityPrintNumber(const UNITY_INT number_to_print)
+                                      ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity_internals.h:443:39: note: Function 'UnityPrintNumber' argument 1 names different: declaration 'number' definition 'number_to_print'.
+void UnityPrintNumber(const UNITY_INT number);
+                                      ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:176:39: note: Function 'UnityPrintNumber' argument 1 names different: declaration 'number' definition 'number_to_print'.
+void UnityPrintNumber(const UNITY_INT number_to_print)
+                                      ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:210:62: style:inconclusive: Function 'UnityPrintNumberHex' argument 2 names different: declaration 'nibbles' definition 'nibbles_to_print'. [funcArgNamesDifferent]
+void UnityPrintNumberHex(const UNITY_UINT number, const char nibbles_to_print)
+                                                             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity_internals.h:445:62: note: Function 'UnityPrintNumberHex' argument 2 names different: declaration 'nibbles' definition 'nibbles_to_print'.
+void UnityPrintNumberHex(const UNITY_UINT number, const char nibbles);
+                                                             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:210:62: note: Function 'UnityPrintNumberHex' argument 2 names different: declaration 'nibbles' definition 'nibbles_to_print'.
+void UnityPrintNumberHex(const UNITY_UINT number, const char nibbles_to_print)
+                                                             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1280:28: style:inconclusive: Function 'UnityFail' argument 1 names different: declaration 'message' definition 'msg'. [funcArgNamesDifferent]
+void UnityFail(const char* msg, const UNITY_LINE_TYPE line)
+                           ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity_internals.h:519:28: note: Function 'UnityFail' argument 1 names different: declaration 'message' definition 'msg'.
+void UnityFail(const char* message, const UNITY_LINE_TYPE line);
+                           ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1280:28: note: Function 'UnityFail' argument 1 names different: declaration 'message' definition 'msg'.
+void UnityFail(const char* msg, const UNITY_LINE_TYPE line)
+                           ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1314:30: style:inconclusive: Function 'UnityIgnore' argument 1 names different: declaration 'message' definition 'msg'. [funcArgNamesDifferent]
+void UnityIgnore(const char* msg, const UNITY_LINE_TYPE line)
+                             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity_internals.h:521:30: note: Function 'UnityIgnore' argument 1 names different: declaration 'message' definition 'msg'.
+void UnityIgnore(const char* message, const UNITY_LINE_TYPE line);
+                             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1314:30: note: Function 'UnityIgnore' argument 1 names different: declaration 'message' definition 'msg'.
+void UnityIgnore(const char* msg, const UNITY_LINE_TYPE line)
+                             ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1090:20: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+    UNITY_UINT32 i = 0;
+                   ^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:81:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR(*pch);
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:86:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('\\');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:87:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('r');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:92:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('\\');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:93:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('n');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:110:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('\\');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:111:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('x');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:130:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR(*pch);
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:135:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('\\');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:136:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('r');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:141:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('\\');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:142:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('n');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:147:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('\\');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:148:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('x');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:169:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('0');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:170:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('x');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:183:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('-');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:204:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR((char)('0' + (number / divisor % 10)));
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:223:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            UNITY_OUTPUT_CHAR((char)('0' + nibble));
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:227:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            UNITY_OUTPUT_CHAR((char)('A' - 10 + nibble));
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:244:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('1');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:248:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('0');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:253:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            UNITY_OUTPUT_CHAR('X');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:273:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('-');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:322:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            if(digits == decimals) UNITY_OUTPUT_CHAR('.');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:323:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            UNITY_OUTPUT_CHAR(buf[--digits]);
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:329:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            UNITY_OUTPUT_CHAR('e');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:333:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('-');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:338:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR('+');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:349:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+                UNITY_OUTPUT_CHAR(buf[--digits]);
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:360:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_OUTPUT_CHAR(':');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:362:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_OUTPUT_CHAR(':');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:364:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_OUTPUT_CHAR(':');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:372:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_OUTPUT_CHAR(':');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:394:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_PRINT_EOL();
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:427:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('\'');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:429:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('\'');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:438:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('\'');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:440:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('\'');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:456:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('\'');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:458:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('\'');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:467:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('\'');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:469:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR('\'');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1288:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR(':');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1305:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            UNITY_OUTPUT_CHAR(' ');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1322:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR(':');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1323:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        UNITY_OUTPUT_CHAR(' ');
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1367:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_PRINT_EOL();
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1369:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_PRINT_EOL();
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1376:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_PRINT_EOL();
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1388:0: information: Skipping configuration 'UNITY_OUTPUT_CHAR' since the value of 'UNITY_OUTPUT_CHAR' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    UNITY_PRINT_EOL();
+^
+User/COMPONENT/http-parser/http-parser/bench.c:70:9: style: The scope of the variable 'rps' can be reduced. [variableScope]
+  float rps;
+        ^
+User/COMPONENT/http-parser/http-parser/http_parser.c:2145:62: style:inconclusive: Function 'http_parser_init' argument 2 names different: declaration 'type' definition 't'. [funcArgNamesDifferent]
+http_parser_init (http_parser *parser, enum http_parser_type t)
+                                                             ^
+User/COMPONENT/http-parser/http-parser/http_parser.h:382:66: note: Function 'http_parser_init' argument 2 names different: declaration 'type' definition 't'.
+void http_parser_init(http_parser *parser, enum http_parser_type type);
+                                                                 ^
+User/COMPONENT/http-parser/http-parser/http_parser.c:2145:62: note: Function 'http_parser_init' argument 2 names different: declaration 'type' definition 't'.
+http_parser_init (http_parser *parser, enum http_parser_type t)
+                                                             ^
+User/COMPONENT/http-parser/http-parser/test.c:1785:23: error: Invalid memchr() argument nr 3. The value is -1 but the valid values are '0:'. [invalidFunctionArg]
+  p = memchr(s, '\0', maxlen);
+                      ^
+User/COMPONENT/http-parser/http-parser/test.c:1817:34: note: Calling function 'strlncat', 4th argument '(unsigned long)-1' value is -1
+  return strlncat(dst, len, src, (size_t) -1);
+                                 ^
+User/COMPONENT/http-parser/http-parser/test.c:1800:23: note: Calling function 'strnlen', 2nd argument 'n' value is -1
+  slen = strnlen(src, n);
+                      ^
+User/COMPONENT/http-parser/http-parser/test.c:1785:23: note: Invalid argument
+  p = memchr(s, '\0', maxlen);
+                      ^
+User/COMPONENT/http-parser/http-parser/test.c:1797:10: style: The scope of the variable 'rlen' can be reduced. [variableScope]
+  size_t rlen;
+         ^
+User/COMPONENT/http-parser/http-parser/test.c:1798:10: style: The scope of the variable 'ncpy' can be reduced. [variableScope]
+  size_t ncpy;
+         ^
+User/COMPONENT/http-parser/http-parser/test.c:1824:10: style: The scope of the variable 'ncpy' can be reduced. [variableScope]
+  size_t ncpy;
+         ^
+User/COMPONENT/http-parser/http-parser/test.c:2471:7: style: The scope of the variable 'r' can be reduced. [variableScope]
+  int r;
+      ^
+User/COMPONENT/http-parser/http-parser/test.c:3172:7: style: The scope of the variable 'rv' can be reduced. [variableScope]
+  int rv;
+      ^
+User/COMPONENT/http-parser/http-parser/test.c:3286:13: style: The scope of the variable 'toread' can be reduced. [variableScope]
+  size_t i, toread;
+            ^
+User/COMPONENT/http-parser/http-parser/test.c:2593:15: style: Local variable 'parser' shadows outer variable [shadowVariable]
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:46:21: note: Shadowed declaration
+static http_parser *parser;
+                    ^
+User/COMPONENT/http-parser/http-parser/test.c:2593:15: note: Shadow variable
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:3345:15: style: Local variable 'parser' shadows outer variable [shadowVariable]
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:46:21: note: Shadowed declaration
+static http_parser *parser;
+                    ^
+User/COMPONENT/http-parser/http-parser/test.c:3345:15: note: Shadow variable
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:3379:15: style: Local variable 'parser' shadows outer variable [shadowVariable]
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:46:21: note: Shadowed declaration
+static http_parser *parser;
+                    ^
+User/COMPONENT/http-parser/http-parser/test.c:3379:15: note: Shadow variable
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:3413:15: style: Local variable 'parser' shadows outer variable [shadowVariable]
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:46:21: note: Shadowed declaration
+static http_parser *parser;
+                    ^
+User/COMPONENT/http-parser/http-parser/test.c:3413:15: note: Shadow variable
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:3440:15: style: Local variable 'parser' shadows outer variable [shadowVariable]
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:46:21: note: Shadowed declaration
+static http_parser *parser;
+                    ^
+User/COMPONENT/http-parser/http-parser/test.c:3440:15: note: Shadow variable
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:3467:15: style: Local variable 'parser' shadows outer variable [shadowVariable]
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:46:21: note: Shadowed declaration
+static http_parser *parser;
+                    ^
+User/COMPONENT/http-parser/http-parser/test.c:3467:15: note: Shadow variable
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:3494:15: style: Local variable 'parser' shadows outer variable [shadowVariable]
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:46:21: note: Shadowed declaration
+static http_parser *parser;
+                    ^
+User/COMPONENT/http-parser/http-parser/test.c:3494:15: note: Shadow variable
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:3523:15: style: Local variable 'parser' shadows outer variable [shadowVariable]
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:46:21: note: Shadowed declaration
+static http_parser *parser;
+                    ^
+User/COMPONENT/http-parser/http-parser/test.c:3523:15: note: Shadow variable
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:3538:15: style: Local variable 'parser' shadows outer variable [shadowVariable]
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:46:21: note: Shadowed declaration
+static http_parser *parser;
+                    ^
+User/COMPONENT/http-parser/http-parser/test.c:3538:15: note: Shadow variable
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:3585:15: style: Local variable 'parser' shadows outer variable [shadowVariable]
+  http_parser parser;
+              ^
+User/COMPONENT/http-parser/http-parser/test.c:46:21: note: Shadowed declaration
+static http_parser *parser;
+                    ^
+User/COMPONENT/http-parser/http-parser/test.c:3585:15: note: Shadow variable
+  http_parser parser;
+              ^
+User/COMPONENT/json11/json11.cpp:451:10: performance:inconclusive: Technically the member function 'json11::::JsonParser::encode_utf8' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void encode_utf8(long pt, string & out) {
+         ^
+User/COMPONENT/json11/json11.hpp:92:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(std::nullptr_t) noexcept;  // NUL
+    ^
+User/COMPONENT/json11/json11.hpp:93:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(double value);             // NUMBER
+    ^
+User/COMPONENT/json11/json11.hpp:94:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(int value);                // NUMBER
+    ^
+User/COMPONENT/json11/json11.hpp:95:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(bool value);               // BOOL
+    ^
+User/COMPONENT/json11/json11.hpp:96:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(const std::string &value); // STRING
+    ^
+User/COMPONENT/json11/json11.hpp:97:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(std::string &&value);      // STRING
+    ^
+User/COMPONENT/json11/json11.hpp:98:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(const char * value);       // STRING
+    ^
+User/COMPONENT/json11/json11.hpp:99:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(const array &values);      // ARRAY
+    ^
+User/COMPONENT/json11/json11.hpp:100:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(array &&values);           // ARRAY
+    ^
+User/COMPONENT/json11/json11.hpp:101:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(const object &values);     // OBJECT
+    ^
+User/COMPONENT/json11/json11.hpp:102:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(object &&values);          // OBJECT
+    ^
+User/COMPONENT/json11/json11.hpp:106:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(const T & t) : Json(t.to_json()) {}
+    ^
+User/COMPONENT/json11/json11.hpp:113:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(const M & m) : Json(object(m.begin(), m.end())) {}
+    ^
+User/COMPONENT/json11/json11.hpp:119:5: style: Class 'Json' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Json(const V & v) : Json(array(v.begin(), v.end())) {}
+    ^
+User/COMPONENT/json11/json11.cpp:302:36: style:inconclusive: Function 'operator==' argument 1 names different: declaration 'rhs' definition 'other'. [funcArgNamesDifferent]
+bool Json::operator== (const Json &other) const {
+                                   ^
+User/COMPONENT/json11/json11.hpp:192:34: note: Function 'operator==' argument 1 names different: declaration 'rhs' definition 'other'.
+    bool operator== (const Json &rhs) const;
+                                 ^
+User/COMPONENT/json11/json11.cpp:302:36: note: Function 'operator==' argument 1 names different: declaration 'rhs' definition 'other'.
+bool Json::operator== (const Json &other) const {
+                                   ^
+User/COMPONENT/json11/json11.cpp:309:35: style:inconclusive: Function 'operator<' argument 1 names different: declaration 'rhs' definition 'other'. [funcArgNamesDifferent]
+bool Json::operator< (const Json &other) const {
+                                  ^
+User/COMPONENT/json11/json11.hpp:193:34: note: Function 'operator<' argument 1 names different: declaration 'rhs' definition 'other'.
+    bool operator<  (const Json &rhs) const;
+                                 ^
+User/COMPONENT/json11/json11.cpp:309:35: note: Function 'operator<' argument 1 names different: declaration 'rhs' definition 'other'.
+bool Json::operator< (const Json &other) const {
+                                  ^
+User/COMPONENT/json11/json11.cpp:509:24: style: Local variable 'esc' shadows outer function [shadowFunction]
+                string esc = str.substr(i, 4);
+                       ^
+User/COMPONENT/json11/json11.cpp:324:22: note: Shadowed declaration
+static inline string esc(char c) {
+                     ^
+User/COMPONENT/json11/json11.cpp:509:24: note: Shadow variable
+                string esc = str.substr(i, 4);
+                       ^
+User/COMPONENT/json11/json11.cpp:775:56: style: Consider using std::find_if algorithm instead of a raw loop. [useStlAlgorithm]
+        if ((*this)[item.first].type() != item.second) {
+                                                       ^
+User/COMPONENT/qrcode/QrCode.cc:614:56: style:inconclusive: Boolean expression 'invert' is used in bitwise operation. Did you mean '&&'? [bitwiseOnBoolean]
+   modules.at(y).at(x) = modules.at(y).at(x) ^ (invert & !isFunction.at(y).at(x));
+                                                       ^
+User/COMPONENT/qrcode/QrCode.cc:614:56: style: Boolean result is used in bitwise operation. Clarify expression with parentheses. [clarifyCondition]
+   modules.at(y).at(x) = modules.at(y).at(x) ^ (invert & !isFunction.at(y).at(x));
+                                                       ^
+User/COMPONENT/qrcode/QrCode.cc:284:8: style: Consider using std::accumulate algorithm instead of a raw loop. [useStlAlgorithm]
+   ecl = newEcl;
+       ^
+User/COMPONENT/qrcode/QrCode.cc:684:5: style: Consider using std::count_if algorithm instead of a raw loop. [useStlAlgorithm]
+    black++;
+    ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:700:42: warning: Null pointer dereference: input_buffer [ctunullpointer]
+    const unsigned char *input_pointer = buffer_at_offset(input_buffer) + 1;
+                                         ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1566:13: note: Assuming that condition 'input_buffer!=NULL' is not redundant
+
+            ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:1556:26: note: Calling function parse_string, 2nd argument is null
+        if (!parse_string(current_item, input_buffer))
+                         ^
+User/COMPONENT/cJSON/cJSON/cJSON.c:700:42: note: Dereferencing argument input_buffer that is null
+    const unsigned char *input_pointer = buffer_at_offset(input_buffer) + 1;
+                                         ^
+User/COMPONENT/cJSON/cJSON/tests/common.h:54:18: warning: Null pointer dereference: filename [ctunullpointer]
+    file = fopen(filename, "rb");
+                 ^
+User/COMPONENT/cJSON/cJSON/tests/parse_examples.c:99:19: note: Assuming that condition 'test_path!=NULL' is not redundant
+
+                  ^
+User/COMPONENT/cJSON/cJSON/tests/parse_examples.c:76:22: note: Calling function parse_file, 1st argument is null
+    tree = parse_file(test_path);
+                     ^
+User/COMPONENT/cJSON/cJSON/tests/parse_examples.c:34:21: note: Calling function read_file, 1st argument is null
+    char *content = read_file(filename);
+                    ^
+User/COMPONENT/cJSON/cJSON/tests/common.h:54:18: note: Dereferencing argument filename that is null
+    file = fopen(filename, "rb");
+                 ^
+Libraries/FWlib/src/stm32f10x_adc.c:1082:0: style: The function 'ADC_AnalogWatchdogCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:1145:0: style: The function 'ADC_AnalogWatchdogSingleChannelConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:1107:0: style: The function 'ADC_AnalogWatchdogThresholdsConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:734:0: style: The function 'ADC_AutoInjectedConvCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:1228:0: style: The function 'ADC_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:1283:0: style: The function 'ADC_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:299:0: style: The function 'ADC_Cmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:324:0: style: The function 'ADC_DMACmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:179:0: style: The function 'ADC_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:509:0: style: The function 'ADC_DiscModeChannelCountConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:536:0: style: The function 'ADC_DiscModeCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:686:0: style: The function 'ADC_ExternalTrigConvCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:824:0: style: The function 'ADC_ExternalTrigInjectedConvCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:799:0: style: The function 'ADC_ExternalTrigInjectedConvConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:430:0: style: The function 'ADC_GetCalibrationStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:708:0: style: The function 'ADC_GetConversionValue' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:720:0: style: The function 'ADC_GetDualModeConversionValue' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:1195:0: style: The function 'ADC_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:1247:0: style: The function 'ADC_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:1052:0: style: The function 'ADC_GetInjectedConversionValue' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:392:0: style: The function 'ADC_GetResetCalibrationStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:481:0: style: The function 'ADC_GetSoftwareStartConvStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:873:0: style: The function 'ADC_GetSoftwareStartInjectedConvCmdStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:353:0: style: The function 'ADC_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:218:0: style: The function 'ADC_Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:930:0: style: The function 'ADC_InjectedChannelConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:760:0: style: The function 'ADC_InjectedDiscModeCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:993:0: style: The function 'ADC_InjectedSequencerLengthConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:590:0: style: The function 'ADC_RegularChannelConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:379:0: style: The function 'ADC_ResetCalibration' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:1025:0: style: The function 'ADC_SetInjectedOffset' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:457:0: style: The function 'ADC_SoftwareStartConvCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:849:0: style: The function 'ADC_SoftwareStartInjectedConvCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:417:0: style: The function 'ADC_StartCalibration' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:275:0: style: The function 'ADC_StructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_adc.c:1167:0: style: The function 'ADC_TempSensorVrefintCmd' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_3/helper/UnityHelper.c:6:0: style: The function 'AssertEqualExampleStruct' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:269:0: style: The function 'BKP_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:290:0: style: The function 'BKP_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:120:0: style: The function 'BKP_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:259:0: style: The function 'BKP_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:280:0: style: The function 'BKP_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:160:0: style: The function 'BKP_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:180:0: style: The function 'BKP_RTCOutputConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:241:0: style: The function 'BKP_ReadBackupRegister' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:201:0: style: The function 'BKP_SetRTCCalibrationValue' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:147:0: style: The function 'BKP_TamperPinCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:134:0: style: The function 'BKP_TamperPinLevelConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_bkp.c:222:0: style: The function 'BKP_WriteBackupRegister' is never used. [unusedFunction]
+
+^
+User/stm32f10x_it.c:84:0: style: The function 'BusFault_Handler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:643:0: style: The function 'CAN_CancelTransmit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:1143:0: style: The function 'CAN_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:1306:0: style: The function 'CAN_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:451:0: style: The function 'CAN_DBGFreeze' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:122:0: style: The function 'CAN_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:720:0: style: The function 'CAN_FIFORelease' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:292:0: style: The function 'CAN_FilterInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:1043:0: style: The function 'CAN_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:1203:0: style: The function 'CAN_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:966:0: style: The function 'CAN_GetLSBTransmitErrorCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:922:0: style: The function 'CAN_GetLastErrorCode' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:946:0: style: The function 'CAN_GetReceiveErrorCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:1003:0: style: The function 'CAN_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:154:0: style: The function 'CAN_Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:743:0: style: The function 'CAN_MessagePending' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:774:0: style: The function 'CAN_OperatingModeRequest' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:671:0: style: The function 'CAN_Receive' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:428:0: style: The function 'CAN_SlaveStartBank' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:856:0: style: The function 'CAN_Sleep' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:384:0: style: The function 'CAN_StructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:481:0: style: The function 'CAN_TTComModeCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:515:0: style: The function 'CAN_Transmit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:589:0: style: The function 'CAN_TransmitStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_can.c:882:0: style: The function 'CAN_WakeUp' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:349:0: style: The function 'CEC_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:408:0: style: The function 'CEC_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:164:0: style: The function 'CEC_Cmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:118:0: style: The function 'CEC_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:262:0: style: The function 'CEC_EndOfMessageCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:291:0: style: The function 'CEC_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:372:0: style: The function 'CEC_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:186:0: style: The function 'CEC_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:135:0: style: The function 'CEC_Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:199:0: style: The function 'CEC_OwnAddressConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:239:0: style: The function 'CEC_ReceiveDataByte' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:227:0: style: The function 'CEC_SendDataByte' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:213:0: style: The function 'CEC_SetPrescaler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_cec.c:250:0: style: The function 'CEC_StartOfMessage' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_crc.c:107:0: style: The function 'CRC_CalcBlockCRC' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_crc.c:94:0: style: The function 'CRC_CalcCRC' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_crc.c:123:0: style: The function 'CRC_GetCRC' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_crc.c:143:0: style: The function 'CRC_GetIDRegister' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_crc.c:83:0: style: The function 'CRC_ResetDR' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_crc.c:133:0: style: The function 'CRC_SetIDRegister' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:489:0: style: The function 'DAC_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:548:0: style: The function 'DAC_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:173:0: style: The function 'DAC_Cmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:233:0: style: The function 'DAC_DMACmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:98:0: style: The function 'DAC_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:284:0: style: The function 'DAC_DualSoftwareTriggerCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:430:0: style: The function 'DAC_GetDataOutputValue' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:456:0: style: The function 'DAC_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:510:0: style: The function 'DAC_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:203:0: style: The function 'DAC_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:117:0: style: The function 'DAC_Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:342:0: style: The function 'DAC_SetChannel1Data' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:367:0: style: The function 'DAC_SetChannel2Data' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:396:0: style: The function 'DAC_SetDualChannelData' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:260:0: style: The function 'DAC_SoftwareTriggerCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:150:0: style: The function 'DAC_StructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dac.c:314:0: style: The function 'DAC_WaveGenerationCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dbgmcu.c:134:0: style: The function 'DBGMCU_Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dbgmcu.c:94:0: style: The function 'DBGMCU_GetDEVID' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dbgmcu.c:84:0: style: The function 'DBGMCU_GetREVID' is never used. [unusedFunction]
+
+^
+User/stm32f10x_it.c:142:0: style: The function 'DEBUG_USART_IRQHandler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:523:0: style: The function 'DMA_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:684:0: style: The function 'DMA_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:294:0: style: The function 'DMA_Cmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:108:0: style: The function 'DMA_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:371:0: style: The function 'DMA_GetCurrDataCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:433:0: style: The function 'DMA_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:595:0: style: The function 'DMA_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:326:0: style: The function 'DMA_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:202:0: style: The function 'DMA_Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:353:0: style: The function 'DMA_SetCurrDataCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_dma.c:259:0: style: The function 'DMA_StructInit' is never used. [unusedFunction]
+
+^
+User/stm32f10x_it.c:119:0: style: The function 'DebugMon_Handler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_exti.c:209:0: style: The function 'EXTI_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_exti.c:249:0: style: The function 'EXTI_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_exti.c:85:0: style: The function 'EXTI_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_exti.c:171:0: style: The function 'EXTI_GenerateSWInterrupt' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_exti.c:186:0: style: The function 'EXTI_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_exti.c:224:0: style: The function 'EXTI_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_exti.c:101:0: style: The function 'EXTI_Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_exti.c:157:0: style: The function 'EXTI_StructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:1172:0: style: The function 'FLASH_BootConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:975:0: style: The function 'FLASH_EnableWriteProtection' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:555:0: style: The function 'FLASH_EraseAllBank1Pages' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:585:0: style: The function 'FLASH_EraseAllBank2Pages' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:492:0: style: The function 'FLASH_EraseAllPages' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:616:0: style: The function 'FLASH_EraseOptionBytes' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:419:0: style: The function 'FLASH_ErasePage' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:1357:0: style: The function 'FLASH_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:1260:0: style: The function 'FLASH_GetPrefetchBufferStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:1477:0: style: The function 'FLASH_GetStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:1216:0: style: The function 'FLASH_GetUserOptionByte' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:1228:0: style: The function 'FLASH_GetWriteProtectionOptionByte' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:281:0: style: The function 'FLASH_HalfCycleAccessCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:1290:0: style: The function 'FLASH_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:392:0: style: The function 'FLASH_LockBank1' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:405:0: style: The function 'FLASH_LockBank2' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:300:0: style: The function 'FLASH_PrefetchBufferCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:858:0: style: The function 'FLASH_ProgramHalfWord' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:929:0: style: The function 'FLASH_ProgramOptionByteData' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:1049:0: style: The function 'FLASH_ReadOutProtection' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:254:0: style: The function 'FLASH_SetLatency' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:340:0: style: The function 'FLASH_UnlockBank1' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:354:0: style: The function 'FLASH_UnlockBank2' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_flash.c:1118:0: style: The function 'FLASH_UserOptionByteConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:747:0: style: The function 'FSMC_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:833:0: style: The function 'FSMC_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:603:0: style: The function 'FSMC_GetECC' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:697:0: style: The function 'FSMC_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:782:0: style: The function 'FSMC_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:637:0: style: The function 'FSMC_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:501:0: style: The function 'FSMC_NANDCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:129:0: style: The function 'FSMC_NANDDeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:564:0: style: The function 'FSMC_NANDECCCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:262:0: style: The function 'FSMC_NANDInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:418:0: style: The function 'FSMC_NANDStructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:475:0: style: The function 'FSMC_NORSRAMCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:102:0: style: The function 'FSMC_NORSRAMDeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:176:0: style: The function 'FSMC_NORSRAMInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:380:0: style: The function 'FSMC_NORSRAMStructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:538:0: style: The function 'FSMC_PCCARDCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:158:0: style: The function 'FSMC_PCCARDDeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:328:0: style: The function 'FSMC_PCCARDInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_fsmc.c:444:0: style: The function 'FSMC_PCCARDStructInit' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_1/src/ProductionCode.c:11:0: style: The function 'FindFunction_WhichIsBroken' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_1/src/ProductionCode.c:21:0: style: The function 'FunctionWhichReturnsLocalVariable' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:159:0: style: The function 'GPIO_AFIODeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:108:0: style: The function 'GPIO_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:630:0: style: The function 'GPIO_ETH_MediaInterfaceConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:609:0: style: The function 'GPIO_EXTILineConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:483:0: style: The function 'GPIO_EventOutputCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:462:0: style: The function 'GPIO_EventOutputConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:432:0: style: The function 'GPIO_PinLockConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:549:0: style: The function 'GPIO_PinRemapConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:305:0: style: The function 'GPIO_ReadInputData' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:343:0: style: The function 'GPIO_ReadOutputData' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:320:0: style: The function 'GPIO_ReadOutputDataBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:266:0: style: The function 'GPIO_StructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:417:0: style: The function 'GPIO_Write' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_gpio.c:394:0: style: The function 'GPIO_WriteBit' is never used. [unusedFunction]
+
+^
+User/COMPONENT/SHA256/sha256.c:186:0: style: The function 'HAL_SHA256_Once' is never used. [unusedFunction]
+
+^
+User/COMPONENT/assert/HAPAssert.c:13:0: style: The function 'HAPAssertAbortInternal' is never used. [unusedFunction]
+
+^
+User/COMPONENT/assert/HAPAssert.c:18:0: style: The function 'HAPAssertInternal' is never used. [unusedFunction]
+
+^
+User/COMPONENT/assert/HAPAssert.c:24:0: style: The function 'HAPAssertionFailureInternal' is never used. [unusedFunction]
+
+^
+User/COMPONENT/assert/HAPAssert.c:42:0: style: The function 'HAPFatalErrorInternal' is never used. [unusedFunction]
+
+^
+User/COMPONENT/assert/HAPAssert.c:36:0: style: The function 'HAPPreconditionFailureInternal' is never used. [unusedFunction]
+
+^
+User/COMPONENT/assert/HAPAssert.c:30:0: style: The function 'HAPPreconditionInternal' is never used. [unusedFunction]
+
+^
+User/stm32f10x_it.c:58:0: style: The function 'HardFault_Handler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:840:0: style: The function 'I2C_ARPCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:442:0: style: The function 'I2C_AcknowledgeConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:803:0: style: The function 'I2C_CalculatePEC' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:1030:0: style: The function 'I2C_CheckEvent' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:1212:0: style: The function 'I2C_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:1307:0: style: The function 'I2C_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:322:0: style: The function 'I2C_Cmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:346:0: style: The function 'I2C_DMACmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:370:0: style: The function 'I2C_DMALastTransferCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:162:0: style: The function 'I2C_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:492:0: style: The function 'I2C_DualAddressCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:890:0: style: The function 'I2C_FastModeDutyCycleConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:516:0: style: The function 'I2C_GeneralCallCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:394:0: style: The function 'I2C_GenerateSTART' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:418:0: style: The function 'I2C_GenerateSTOP' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:1133:0: style: The function 'I2C_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:1246:0: style: The function 'I2C_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:1078:0: style: The function 'I2C_GetLastEvent' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:825:0: style: The function 'I2C_GetPEC' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:545:0: style: The function 'I2C_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:191:0: style: The function 'I2C_Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:696:0: style: The function 'I2C_NACKPositionConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:465:0: style: The function 'I2C_OwnAddress2Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:779:0: style: The function 'I2C_PECPositionConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:636:0: style: The function 'I2C_ReadRegister' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:583:0: style: The function 'I2C_ReceiveData' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:724:0: style: The function 'I2C_SMBusAlertConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:601:0: style: The function 'I2C_Send7bitAddress' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:570:0: style: The function 'I2C_SendData' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:658:0: style: The function 'I2C_SoftwareResetCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:864:0: style: The function 'I2C_StretchClockCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:298:0: style: The function 'I2C_StructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_i2c.c:748:0: style: The function 'I2C_TransmitPEC' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:451:0: style: The function 'I2S_Cmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:219:0: style: The function 'I2S_Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:398:0: style: The function 'I2S_StructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_iwdg.c:148:0: style: The function 'IWDG_Enable' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_iwdg.c:161:0: style: The function 'IWDG_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_iwdg.c:138:0: style: The function 'IWDG_ReloadCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_iwdg.c:112:0: style: The function 'IWDG_SetPrescaler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_iwdg.c:125:0: style: The function 'IWDG_SetReload' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_iwdg.c:92:0: style: The function 'IWDG_WriteAccessCmd' is never used. [unusedFunction]
+
+^
+User/stm32f10x_it.c:71:0: style: The function 'MemManage_Handler' is never used. [unusedFunction]
+
+^
+User/stm32f10x_it.c:49:0: style: The function 'NMI_Handler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/misc.c:156:0: style: The function 'NVIC_SetVectorTable' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/misc.c:175:0: style: The function 'NVIC_SystemLPConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_pwr.c:124:0: style: The function 'PWR_BackupAccessCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_pwr.c:287:0: style: The function 'PWR_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_pwr.c:112:0: style: The function 'PWR_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_pwr.c:236:0: style: The function 'PWR_EnterSTANDBYMode' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_pwr.c:197:0: style: The function 'PWR_EnterSTOPMode' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_pwr.c:261:0: style: The function 'PWR_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_pwr.c:137:0: style: The function 'PWR_PVDCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_pwr.c:158:0: style: The function 'PWR_PVDLevelConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_pwr.c:178:0: style: The function 'PWR_WakeUpPinCmd' is never used. [unusedFunction]
+
+^
+User/stm32f10x_it.c:128:0: style: The function 'PendSV_Handler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:766:0: style: The function 'RCC_ADCCLKConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:1153:0: style: The function 'RCC_AHBPeriphResetCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:334:0: style: The function 'RCC_AdjustHSICalibrationValue' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:1371:0: style: The function 'RCC_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:1448:0: style: The function 'RCC_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:1250:0: style: The function 'RCC_ClockSecuritySystemCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:217:0: style: The function 'RCC_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:1402:0: style: The function 'RCC_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:587:0: style: The function 'RCC_GetSYSCLKSource' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:608:0: style: The function 'RCC_HCLKConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:270:0: style: The function 'RCC_HSEConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:354:0: style: The function 'RCC_HSICmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:792:0: style: The function 'RCC_I2S2CLKConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:811:0: style: The function 'RCC_I2S3CLKConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:700:0: style: The function 'RCC_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:829:0: style: The function 'RCC_LSEConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:862:0: style: The function 'RCC_LSICmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:1282:0: style: The function 'RCC_MCOConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:746:0: style: The function 'RCC_OTGFSCLKConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:634:0: style: The function 'RCC_PCLK1Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:660:0: style: The function 'RCC_PCLK2Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:505:0: style: The function 'RCC_PLL2Cmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:479:0: style: The function 'RCC_PLL2Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:546:0: style: The function 'RCC_PLL3Cmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:523:0: style: The function 'RCC_PLL3Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:401:0: style: The function 'RCC_PLLCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:378:0: style: The function 'RCC_PLLConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:426:0: style: The function 'RCC_PREDIV1Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:454:0: style: The function 'RCC_PREDIV2Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:893:0: style: The function 'RCC_RTCCLKCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:879:0: style: The function 'RCC_RTCCLKConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:564:0: style: The function 'RCC_SYSCLKConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:728:0: style: The function 'RCC_USBCLKConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rcc.c:304:0: style: The function 'RCC_WaitForHSEStartUp' is never used. [unusedFunction]
+
+^
+User/COMPONENT/RSA/Rsa.c:616:0: style: The function 'RSAPrivateEncrypt' is never used. [unusedFunction]
+
+^
+User/COMPONENT/RSA/Rsa.c:567:0: style: The function 'RSAPublicDecrypt' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:273:0: style: The function 'RTC_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:318:0: style: The function 'RTC_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:133:0: style: The function 'RTC_GetCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:193:0: style: The function 'RTC_GetDivider' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:244:0: style: The function 'RTC_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:291:0: style: The function 'RTC_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:90:0: style: The function 'RTC_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:178:0: style: The function 'RTC_SetAlarm' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:145:0: style: The function 'RTC_SetCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:160:0: style: The function 'RTC_SetPrescaler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:207:0: style: The function 'RTC_WaitForLastTask' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_rtc.c:223:0: style: The function 'RTC_WaitForSynchro' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:614:0: style: The function 'SDIO_CEATAITCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:704:0: style: The function 'SDIO_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:779:0: style: The function 'SDIO_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:235:0: style: The function 'SDIO_ClockCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:382:0: style: The function 'SDIO_CmdStructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:601:0: style: The function 'SDIO_CommandCompletionCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:331:0: style: The function 'SDIO_DMACmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:431:0: style: The function 'SDIO_DataConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:472:0: style: The function 'SDIO_DataStructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:161:0: style: The function 'SDIO_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:397:0: style: The function 'SDIO_GetCommandResponse' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:488:0: style: The function 'SDIO_GetDataCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:518:0: style: The function 'SDIO_GetFIFOCount' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:666:0: style: The function 'SDIO_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:743:0: style: The function 'SDIO_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:269:0: style: The function 'SDIO_GetPowerState' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:412:0: style: The function 'SDIO_GetResponse' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:307:0: style: The function 'SDIO_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:181:0: style: The function 'SDIO_Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:498:0: style: The function 'SDIO_ReadData' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:627:0: style: The function 'SDIO_SendCEATACmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:346:0: style: The function 'SDIO_SendCommand' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:587:0: style: The function 'SDIO_SendSDIOSuspendCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:251:0: style: The function 'SDIO_SetPowerState' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:573:0: style: The function 'SDIO_SetSDIOOperation' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:559:0: style: The function 'SDIO_SetSDIOReadWaitMode' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:529:0: style: The function 'SDIO_StartSDIOReadWait' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:543:0: style: The function 'SDIO_StopSDIOReadWait' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:219:0: style: The function 'SDIO_StructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_sdio.c:508:0: style: The function 'SDIO_WriteData' is never used. [unusedFunction]
+
+^
+User/COMPONENT/SHA1/sha1.c:282:0: style: The function 'SHA1' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:732:0: style: The function 'SPI_BiDirectionalLineConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:663:0: style: The function 'SPI_CalculateCRC' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:427:0: style: The function 'SPI_Cmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:631:0: style: The function 'SPI_DataSizeConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:689:0: style: The function 'SPI_GetCRC' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:714:0: style: The function 'SPI_GetCRCPolynomial' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:804:0: style: The function 'SPI_I2S_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:883:0: style: The function 'SPI_I2S_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:521:0: style: The function 'SPI_I2S_DMACmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:119:0: style: The function 'SPI_I2S_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:766:0: style: The function 'SPI_I2S_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:829:0: style: The function 'SPI_I2S_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:482:0: style: The function 'SPI_I2S_ITConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:563:0: style: The function 'SPI_I2S_ReceiveData' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:547:0: style: The function 'SPI_I2S_SendData' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:158:0: style: The function 'SPI_Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:581:0: style: The function 'SPI_NSSInternalSoftwareConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:605:0: style: The function 'SPI_SSOutputCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:370:0: style: The function 'SPI_StructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_spi.c:647:0: style: The function 'SPI_TransmitCRC' is never used. [unusedFunction]
+
+^
+User/stm32f10x_it.c:110:0: style: The function 'SVC_Handler' is never used. [unusedFunction]
+
+^
+User/COMPONENT/SOFTWEAR_UART/s_uart.c:353:0: style: The function 'S_UART_ReceiveData' is never used. [unusedFunction]
+
+^
+User/COMPONENT/SOFTWEAR_UART/s_uart.c:342:0: style: The function 'S_UART_SendData' is never used. [unusedFunction]
+
+^
+User/COMPONENT/SOFTWEAR_UART/s_uart.c:204:0: style: The function 'S_UART_Timer_Handler' is never used. [unusedFunction]
+
+^
+User/COMPONENT/SOFTWEAR_UART/s_uart.c:184:0: style: The function 'S_UART_init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/misc.c:199:0: style: The function 'SysTick_CLKSourceConfig' is never used. [unusedFunction]
+
+^
+User/stm32f10x_it.c:137:0: style: The function 'SysTick_Handler' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/system_stm32f10x.c:306:0: style: The function 'SystemCoreClockUpdate' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/system_stm32f10x.c:212:0: style: The function 'SystemInit' is never used. [unusedFunction]
+
+^
+User/COMPONENT/TEA/tea.c:69:0: style: The function 'TEA_Config128bitsKey' is never used. [unusedFunction]
+
+^
+User/COMPONENT/TEA/tea.c:85:0: style: The function 'TEA_ConfigEncryptTimes' is never used. [unusedFunction]
+
+^
+User/COMPONENT/TEA/tea.c:111:0: style: The function 'TEA_Decrypt' is never used. [unusedFunction]
+
+^
+User/COMPONENT/TEA/tea.c:93:0: style: The function 'TEA_Encrypt' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1409:0: style: The function 'TIM_ARRPreloadConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:712:0: style: The function 'TIM_BDTRConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:787:0: style: The function 'TIM_BDTRStructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1483:0: style: The function 'TIM_CCPreloadControl' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1974:0: style: The function 'TIM_CCxCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2004:0: style: The function 'TIM_CCxNCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2676:0: style: The function 'TIM_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1707:0: style: The function 'TIM_ClearOC1Ref' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1733:0: style: The function 'TIM_ClearOC2Ref' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1757:0: style: The function 'TIM_ClearOC3Ref' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1781:0: style: The function 'TIM_ClearOC4Ref' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1199:0: style: The function 'TIM_CounterModeConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:831:0: style: The function 'TIM_CtrlPWMOutputs' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:964:0: style: The function 'TIM_DMACmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:937:0: style: The function 'TIM_DMAConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:122:0: style: The function 'TIM_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1075:0: style: The function 'TIM_ETRClockMode1Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1117:0: style: The function 'TIM_ETRClockMode2Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1264:0: style: The function 'TIM_EncoderInterfaceConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1315:0: style: The function 'TIM_ForcedOC1Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1339:0: style: The function 'TIM_ForcedOC2Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1363:0: style: The function 'TIM_ForcedOC3Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1387:0: style: The function 'TIM_ForcedOC4Config' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:909:0: style: The function 'TIM_GenerateEvent' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2457:0: style: The function 'TIM_GetCapture1' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2470:0: style: The function 'TIM_GetCapture2' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2483:0: style: The function 'TIM_GetCapture3' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2496:0: style: The function 'TIM_GetCapture4' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2509:0: style: The function 'TIM_GetCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2556:0: style: The function 'TIM_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2632:0: style: The function 'TIM_GetITStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2522:0: style: The function 'TIM_GetPrescaler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:587:0: style: The function 'TIM_ICInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:771:0: style: The function 'TIM_ICStructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1008:0: style: The function 'TIM_ITRxExternalClockConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:989:0: style: The function 'TIM_InternalClockConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1606:0: style: The function 'TIM_OC1FastConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:279:0: style: The function 'TIM_OC1Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1828:0: style: The function 'TIM_OC1NPolarityConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1805:0: style: The function 'TIM_OC1PolarityConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1509:0: style: The function 'TIM_OC1PreloadConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1632:0: style: The function 'TIM_OC2FastConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:362:0: style: The function 'TIM_OC2Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1875:0: style: The function 'TIM_OC2NPolarityConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1852:0: style: The function 'TIM_OC2PolarityConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1534:0: style: The function 'TIM_OC2PreloadConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1657:0: style: The function 'TIM_OC3FastConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:444:0: style: The function 'TIM_OC3Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1922:0: style: The function 'TIM_OC3NPolarityConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1899:0: style: The function 'TIM_OC3PolarityConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1558:0: style: The function 'TIM_OC3PreloadConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1682:0: style: The function 'TIM_OC4FastConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:523:0: style: The function 'TIM_OC4Init' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1947:0: style: The function 'TIM_OC4PolarityConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1582:0: style: The function 'TIM_OC4PreloadConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:752:0: style: The function 'TIM_OCStructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:654:0: style: The function 'TIM_PWMIConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1176:0: style: The function 'TIM_PrescalerConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1458:0: style: The function 'TIM_SelectCCDMA' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1433:0: style: The function 'TIM_SelectCOM' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2144:0: style: The function 'TIM_SelectHallSensor' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2246:0: style: The function 'TIM_SelectMasterSlaveMode' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2045:0: style: The function 'TIM_SelectOCxM' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2170:0: style: The function 'TIM_SelectOnePulseMode' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2202:0: style: The function 'TIM_SelectOutputTrigger' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2225:0: style: The function 'TIM_SelectSlaveMode' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2278:0: style: The function 'TIM_SetAutoreload' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2441:0: style: The function 'TIM_SetClockDivision' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2292:0: style: The function 'TIM_SetCompare1' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2306:0: style: The function 'TIM_SetCompare2' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2320:0: style: The function 'TIM_SetCompare3' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2334:0: style: The function 'TIM_SetCompare4' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2264:0: style: The function 'TIM_SetCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:1035:0: style: The function 'TIM_TIxExternalClockConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:736:0: style: The function 'TIM_TimeBaseStructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2092:0: style: The function 'TIM_UpdateDisableConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_tim.c:2120:0: style: The function 'TIM_UpdateRequestConfig' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/examples/example_1/src/ProductionCode2.c:4:0: style: The function 'ThisFunctionHasNotBeenTested' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:923:0: style: The function 'USART_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:1030:0: style: The function 'USART_ClearITPendingBit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:302:0: style: The function 'USART_ClockInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:333:0: style: The function 'USART_ClockStructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:448:0: style: The function 'USART_DMACmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:130:0: style: The function 'USART_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:731:0: style: The function 'USART_HalfDuplexCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:837:0: style: The function 'USART_IrDACmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:818:0: style: The function 'USART_IrDAConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:547:0: style: The function 'USART_LINBreakDetectLengthConfig' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:566:0: style: The function 'USART_LINCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:789:0: style: The function 'USART_OneBitMethodCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:762:0: style: The function 'USART_OverSampling8Cmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:518:0: style: The function 'USART_ReceiverWakeUpCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:625:0: style: The function 'USART_SendBreak' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:476:0: style: The function 'USART_SetAddress' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:641:0: style: The function 'USART_SetGuardTime' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:661:0: style: The function 'USART_SetPrescaler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:680:0: style: The function 'USART_SmartCardCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:705:0: style: The function 'USART_SmartCardNACKCmd' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:281:0: style: The function 'USART_StructInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_usart.c:499:0: style: The function 'USART_WakeUpConfig' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:903:0: style: The function 'UnityAssertDoubleSpecial' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:842:0: style: The function 'UnityAssertEqualDoubleArray' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:712:0: style: The function 'UnityAssertEqualFloatArray' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:601:0: style: The function 'UnityAssertEqualIntArray' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1162:0: style: The function 'UnityAssertEqualMemory' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1083:0: style: The function 'UnityAssertEqualStringArray' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1043:0: style: The function 'UnityAssertEqualStringLen' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:773:0: style: The function 'UnityAssertFloatSpecial' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:754:0: style: The function 'UnityAssertFloatsWithin' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:555:0: style: The function 'UnityAssertGreaterOrLessOrEqualNumber' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:965:0: style: The function 'UnityAssertNumbersWithin' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1269:0: style: The function 'UnityDoubleToPtr' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1261:0: style: The function 'UnityFloatToPtr' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:115:0: style: The function 'UnityIgnoreTest' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:32:0: style: The function 'UnityMain' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:153:0: style: The function 'UnityMalloc_MakeMallocFailAfterCount' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/src/unity.c:1237:0: style: The function 'UnityNumToPtr' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:322:0: style: The function 'UnityPointer_Set' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:68:0: style: The function 'UnityTestRunner' is never used. [unusedFunction]
+
+^
+User/stm32f10x_it.c:97:0: style: The function 'UsageFault_Handler' is never used. [unusedFunction]
+
+^
+User/BSP/bsp_usart.c:114:0: style: The function 'Usart_SendArray' is never used. [unusedFunction]
+
+^
+User/BSP/bsp_usart.c:142:0: style: The function 'Usart_SendHalfWord' is never used. [unusedFunction]
+
+^
+User/BSP/bsp_usart.c:128:0: style: The function 'Usart_SendString' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_wwdg.c:207:0: style: The function 'WWDG_ClearFlag' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_wwdg.c:102:0: style: The function 'WWDG_DeInit' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_wwdg.c:185:0: style: The function 'WWDG_Enable' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_wwdg.c:159:0: style: The function 'WWDG_EnableIT' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_wwdg.c:197:0: style: The function 'WWDG_GetFlagStatus' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_wwdg.c:170:0: style: The function 'WWDG_SetCounter' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_wwdg.c:118:0: style: The function 'WWDG_SetPrescaler' is never used. [unusedFunction]
+
+^
+Libraries/FWlib/src/stm32f10x_wwdg.c:137:0: style: The function 'WWDG_SetWindowValue' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:142:0: style: The function '__CLREX' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:683:0: style: The function '__LDREXB' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:699:0: style: The function '__LDREXH' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:715:0: style: The function '__LDREXW' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:667:0: style: The function '__RBIT' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:619:0: style: The function '__REV' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:114:0: style: The function '__REV16' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:128:0: style: The function '__REVSH' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:732:0: style: The function '__STREXB' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:749:0: style: The function '__STREXH' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:766:0: style: The function '__STREXW' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:154:0: style: The function '__get_BASEPRI' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:232:0: style: The function '__get_CONTROL' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:206:0: style: The function '__get_FAULTMASK' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:86:0: style: The function '__get_MSP' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:180:0: style: The function '__get_PRIMASK' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:58:0: style: The function '__get_PSP' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:167:0: style: The function '__set_BASEPRI' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:245:0: style: The function '__set_CONTROL' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:219:0: style: The function '__set_FAULTMASK' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:100:0: style: The function '__set_MSP' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:193:0: style: The function '__set_PRIMASK' is never used. [unusedFunction]
+
+^
+Libraries/CMSIS/core_cm3.c:72:0: style: The function '__set_PSP' is never used. [unusedFunction]
+
+^
+User/COMPONENT/AES/aes.c:533:0: style: The function 'aes_decode' is never used. [unusedFunction]
+
+^
+User/COMPONENT/AES/aes.c:502:0: style: The function 'aes_encode' is never used. [unusedFunction]
+
+^
+User/COMPONENT/AT/at.c:59:0: style: The function 'at_get_char' is never used. [unusedFunction]
+
+^
+User/COMPONENT/AT/at.c:252:0: style: The function 'at_init' is never used. [unusedFunction]
+
+^
+User/COMPONENT/AT/at.c:283:0: style: The function 'at_task' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:11:0: style: The function 'big_little_endian_check' is never used. [unusedFunction]
+
+^
+User/COMPONENT/BUTTON/button.c:43:0: style: The function 'button_attach' is never used. [unusedFunction]
+
+^
+User/COMPONENT/BUTTON/button.c:27:0: style: The function 'button_init' is never used. [unusedFunction]
+
+^
+User/COMPONENT/BUTTON/button.c:173:0: style: The function 'button_start' is never used. [unusedFunction]
+
+^
+User/COMPONENT/BUTTON/button.c:193:0: style: The function 'button_stop' is never used. [unusedFunction]
+
+^
+User/COMPONENT/BUTTON/button.c:213:0: style: The function 'button_ticks' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/cJSON_Utils.c:1446:0: style: The function 'cJSONUtils_GenerateMergePatchCaseSensitive' is never used. [unusedFunction]
+
+^
+User/SYS/sys_command_line.c:278:0: style: The function 'cli_init' is never used. [unusedFunction]
+
+^
+User/SYS/sys_command_line.c:499:0: style: The function 'cli_run' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:401:0: style: The function 'crc16_ccitt' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:428:0: style: The function 'crc16_ccitt_false' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:509:0: style: The function 'crc16_dnp' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:293:0: style: The function 'crc16_ibm' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:320:0: style: The function 'crc16_maxim' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:374:0: style: The function 'crc16_modbus' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:347:0: style: The function 'crc16_usb' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:455:0: style: The function 'crc16_x25' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:482:0: style: The function 'crc16_xmodem' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:537:0: style: The function 'crc32' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:564:0: style: The function 'crc32_mpeg_2' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:22:0: style: The function 'crc4_itu' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:49:0: style: The function 'crc5_epc' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:76:0: style: The function 'crc5_itu' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:103:0: style: The function 'crc5_usb' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:130:0: style: The function 'crc6_itu' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:157:0: style: The function 'crc7_mmc' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:184:0: style: The function 'crc8' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:211:0: style: The function 'crc8_itu' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:266:0: style: The function 'crc8_maxim' is never used. [unusedFunction]
+
+^
+User/COMPONENT/crc/crc.c:238:0: style: The function 'crc8_rohc' is never used. [unusedFunction]
+
+^
+User/COMPONENT/qrcode/QrCode.cc:249:0: style: The function 'encodeBinary' is never used. [unusedFunction]
+
+^
+User/COMPONENT/qrcode/QrCode.cc:243:0: style: The function 'encodeText' is never used. [unusedFunction]
+
+^
+User/BSP/bsp_usart.c:173:0: style: The function 'fgetc' is never used. [unusedFunction]
+
+^
+User/COMPONENT/qrcode/QrCode.cc:373:0: style: The function 'getErrorCorrectionLevel' is never used. [unusedFunction]
+
+^
+User/COMPONENT/qrcode/QrCode.cc:378:0: style: The function 'getMask' is never used. [unusedFunction]
+
+^
+User/COMPONENT/qrcode/QrCode.cc:368:0: style: The function 'getSize' is never used. [unusedFunction]
+
+^
+User/COMPONENT/qrcode/QrCode.cc:363:0: style: The function 'getVersion' is never used. [unusedFunction]
+
+^
+User/COMPONENT/BUTTON/button.c:53:0: style: The function 'get_button_event' is never used. [unusedFunction]
+
+^
+User/COMPONENT/SECURE_BOOT/secure_boot.c:100:0: style: The function 'get_chip_flash_size' is never used. [unusedFunction]
+
+^
+User/COMPONENT/http-parser/http-parser/http_parser.c:2156:0: style: The function 'http_parser_settings_init' is never used. [unusedFunction]
+
+^
+User/COMPONENT/qrcode/QrCode.cc:141:0: style: The function 'makeEci' is never used. [unusedFunction]
+
+^
+User/COMPONENT/MD5/md5.c:336:0: style: The function 'md5_calculation' is never used. [unusedFunction]
+
+^
+User/COMPONENT/msg_queue/msg_queue.c:57:0: style: The function 'msg_queue_clear_all_msg' is never used. [unusedFunction]
+
+^
+User/COMPONENT/msg_queue/msg_queue.c:63:0: style: The function 'msg_queue_get_msg' is never used. [unusedFunction]
+
+^
+User/COMPONENT/msg_queue/msg_queue.c:19:0: style: The function 'msg_queue_get_size' is never used. [unusedFunction]
+
+^
+User/COMPONENT/msg_queue/msg_queue.c:158:0: style: The function 'msg_queue_init' is never used. [unusedFunction]
+
+^
+User/COMPONENT/msg_queue/msg_queue.c:90:0: style: The function 'msg_queue_put_msg' is never used. [unusedFunction]
+
+^
+User/COMPONENT/msg_queue/msg_queue.c:117:0: style: The function 'msg_queue_put_msg_renew' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:252:0: style: The function 'my_atoi' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:70:0: style: The function 'my_delete_char' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:121:0: style: The function 'my_hex_to_str' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:225:0: style: The function 'my_htoi' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:285:0: style: The function 'my_itoa' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:88:0: style: The function 'my_str_remove_blank' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:147:0: style: The function 'my_str_to_hex' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:193:0: style: The function 'my_str_to_lower' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:171:0: style: The function 'my_str_to_upper' is never used. [unusedFunction]
+
+^
+User/SYS/sys_queue.c:68:0: style: The function 'queue_in' is never used. [unusedFunction]
+
+^
+User/SYS/sys_queue.c:21:0: style: The function 'queue_init' is never used. [unusedFunction]
+
+^
+User/COMPONENT/SECURE_BOOT/secure_boot.c:267:0: style: The function 'secure_boot_check' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:35:0: style: The function 'str_is_digit' is never used. [unusedFunction]
+
+^
+User/COMPONENT/UTIL/util.c:55:0: style: The function 'strcmpnum' is never used. [unusedFunction]
+
+^
+User/COMPONENT/http-parser/http-parser/test.c:1815:0: style: The function 'strlcat' is never used. [unusedFunction]
+
+^
+User/COMPONENT/http-parser/http-parser/test.c:1839:0: style: The function 'strlcpy' is never used. [unusedFunction]
+
+^
+User/COMPONENT/TIMER/timer.c:21:0: style: The function 'timer_init' is never used. [unusedFunction]
+
+^
+User/COMPONENT/TIMER/timer.c:69:0: style: The function 'timer_loop' is never used. [unusedFunction]
+
+^
+User/COMPONENT/TIMER/timer.c:34:0: style: The function 'timer_start' is never used. [unusedFunction]
+
+^
+User/COMPONENT/TIMER/timer.c:89:0: style: The function 'timer_ticks' is never used. [unusedFunction]
+
+^
+User/COMPONENT/qrcode/QrCode.cc:388:0: style: The function 'toSvgString' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:260:0: style: The function 'unity_calloc' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:243:0: style: The function 'unity_free' is never used. [unusedFunction]
+
+^
+User/COMPONENT/cJSON/cJSON/tests/unity/extras/fixture/src/unity_fixture.c:268:0: style: The function 'unity_realloc' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
